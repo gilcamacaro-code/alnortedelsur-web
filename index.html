@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL NORTE DEL SUR · Productos latinos auténticos en València</title>
+<meta name="description" content="AL NORTE DEL SUR — la despensa de productos latinos más auténtica de València. Quesos, maíces, chiles, harina P.A.N., Goya, Inca Kola y más. Mercado de Ruzafa, Puestos 213-220 (Pasillo 1) y 107-108.">
+<link rel="canonical" href="https://alnortedelsurvlc.com/">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="assets/img/logo-oficial.png">
+<link rel="apple-touch-icon" href="assets/img/logo-oficial.png">
+<meta name="theme-color" content="#12291A">
+<!-- Open Graph / redes -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="AL NORTE DEL SUR · Productos latinos en València">
+<meta property="og:description" content="La despensa de productos latinos más auténtica de València. Mercado de Ruzafa — Puestos 213-220 (Pasillo 1) y 107-108.">
+<meta property="og:url" content="https://alnortedelsurvlc.com/">
+<meta property="og:image" content="https://alnortedelsurvlc.com/assets/img/tienda-interior.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AL NORTE DEL SUR · Productos latinos en València">
+<meta name="twitter:description" content="La despensa latina más auténtica de València. Mercado de Ruzafa, Pasillo 1 (Puestos 213-220) y 107-108.">
+<meta name="twitter:image" content="https://alnortedelsurvlc.com/assets/img/tienda-interior.jpg">
+<!-- Datos estructurados: negocio local (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "AL NORTE DEL SUR",
+  "description": "Tienda de productos latinos auténticos en València: quesos, maíces, chiles, harinas, conservas, bebidas y más.",
+  "image": "https://alnortedelsurvlc.com/assets/img/tienda-interior.jpg",
+  "logo": "https://alnortedelsurvlc.com/assets/img/logo-oficial.png",
+  "url": "https://alnortedelsurvlc.com/",
+  "telephone": "+34671339005",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mercado de Ruzafa, Puestos 213-220 (Pasillo 1) y 107-108",
+    "addressLocality": "València",
+    "postalCode": "46006",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 39.4592, "longitude": -0.3760 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "14:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "16:30", "closes": "20:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:30", "closes": "13:00" }
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Mercado+de+Ruzafa+Valencia",
+  "sameAs": [
+    "https://instagram.com/alnortedelsur_es",
+    "https://facebook.com/alnortedelsur0107"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   SISTEMA DE DISEÑO — AL NORTE DEL SUR
+   Guía de estilo viva. Toda decisión visual sale de estos tokens:
+   cambiar un token = cambiar toda la web de forma consistente.
+
+   1 · TOKENS      color, tipografía, espaciado, radios, sombras, movimiento
+   2 · BASE        reset, tipografía global, accesibilidad
+   3 · COMPONENTES botones, badges, tarjetas, pestañas, iconos, glass
+   4 · SECCIONES   header, hero, catálogo, visítanos, footer…
+   5 · MOVIMIENTO  guía de animación + scroll reveal
+   6 · RESPONSIVE  tablet (≤880) y móvil (≤560)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── 1 · TOKENS ──────────────────────────────────────────────────── */
+:root{
+  /* Color de marca — fresco, artesano, premium.
+     Regla: fondos verde suave · tinta tierra · oro solo para acción/acento ·
+     chile con moderación (etiquetas, énfasis) · verde = abierto/WhatsApp */
+  --crema:#F1F7ED;          /* fondo base — verde suave claro */
+  --crema-2:#E3EFDB;        /* fondo alterno de sección — verde suave */
+  --blanco:#FFFFFF;
+  --bosque-900:#12291A;     /* verde bosque profundo — fondos oscuros */
+  --bosque:#1E4229;         /* verde bosque medio */
+  --tierra-900:#241708;     /* café espresso — tinta sobre oro */
+  --tierra:#3F2D1E;         /* tinta principal */
+  --tierra-soft:#5F5340;    /* tinta secundaria */
+  --choclo:#F2B705;         /* oro maíz — acción principal */
+  --choclo-dark:#C28E04;    /* oro pisado / hover */
+  --chile:#C1352B;          /* rojo chile — acento editorial */
+  --chile-dark:#9A2A22;
+  --verde:#16A34A;          /* verde — estado abierto, WhatsApp */
+  --verde-dark:#0E7C37;
+  --naranja:#E8731C;
+
+  /* Tipografía — Playfair Display (voz editorial) + Poppins (interfaz).
+     Escala fluida: los títulos crecen con la pantalla, nunca desbordan. */
+  --f-display:'Playfair Display',Georgia,serif;
+  --f-ui:'Poppins',-apple-system,'Segoe UI',sans-serif;
+  --fs-hero:clamp(2.5rem,5.2vw,4.25rem);
+  --fs-h2:clamp(1.9rem,3.6vw,2.8rem);
+  --fs-h3:1.35rem;
+  --fs-lead:clamp(1.05rem,1.8vw,1.28rem);
+  --fs-body:.96rem;
+  --fs-sm:.86rem;
+  --fs-xs:.76rem;
+
+  /* Espaciado — escala 8pt: 4·8·12·16·24·32·48·64·96 */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+  --sp-6:32px; --sp-7:48px; --sp-8:64px; --sp-9:96px;
+
+  /* Radios */
+  --r-sm:10px; --r-md:16px; --r-lg:22px; --r-full:50px;
+
+  /* Sombras — tintadas del verde bosque, en dos capas (suave + ambiente) */
+  --sombra-sm:0 2px 6px rgba(18,41,26,.06),0 6px 20px rgba(18,41,26,.09);
+  --sombra:0 4px 12px rgba(18,41,26,.08),0 14px 40px rgba(18,41,26,.15);
+  --sombra-lg:0 8px 20px rgba(8,20,12,.18),0 26px 64px rgba(8,20,12,.28);
+
+  /* Glass — solo donde hay imagen o color profundo detrás */
+  --glass-claro:rgba(241,247,237,.72);
+  --glass-oscuro:rgba(10,24,14,.42);
+  --glass-borde:rgba(255,255,255,.22);
+
+  /* Movimiento — GUÍA: interfaz 150-200ms · hover 250-300ms ·
+     revelado al hacer scroll 600ms. Una sola curva para toda la web. */
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --t-fast:.18s; --t-med:.28s; --t-slow:.6s;
+
+  --radio:var(--r-lg); /* compatibilidad */
+}
+
+/* ── 2 · BASE ────────────────────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--f-ui);color:var(--tierra);background:var(--crema);line-height:1.65;overflow-x:hidden;font-size:var(--fs-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:var(--f-display);line-height:1.12;letter-spacing:-.01em}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--sp-5)}
+section{padding:var(--sp-9) 0}
+.center{text-align:center}
+.eyebrow{display:inline-block;font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--chile);margin-bottom:var(--sp-4)}
+
+/* Accesibilidad: foco visible consistente en TODA la web (teclado) */
+:focus-visible{outline:3px solid var(--choclo);outline-offset:3px;border-radius:6px}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--bosque-900);color:var(--crema);padding:12px 22px;z-index:999;border-radius:0 0 var(--r-sm) 0;font-weight:600}
+.skip-link:focus{left:0}
+
+/* Iconos SVG — heredan el color del texto (currentColor) */
+.ico-svg{width:1.15em;height:1.15em;fill:currentColor;flex-shrink:0;vertical-align:-.18em}
+
+/* ── 3 · COMPONENTES ─────────────────────────────────────────────── */
+
+/* Badges de producto */
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;padding:5px 11px;border-radius:var(--r-full);letter-spacing:.02em}
+.badge.fresca{background:rgba(22,163,74,.14);color:var(--verde-dark)}
+.badge.origen{background:rgba(63,45,30,.10);color:var(--tierra)}
+.badge.premium{background:rgba(242,183,5,.20);color:var(--choclo-dark)}
+
+/* Botones — 3 variantes · 2 tamaños · estados hover/active/focus */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:var(--fs-body);padding:15px 30px;border-radius:var(--r-full);cursor:pointer;border:2px solid transparent;transition:transform var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease),background var(--t-fast),color var(--t-fast),border-color var(--t-fast);font-family:var(--f-ui)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--choclo);color:var(--tierra-900);box-shadow:0 6px 18px rgba(242,183,5,.35)}
+.btn-primary:hover{background:#f8c530;transform:translateY(-2px);box-shadow:0 10px 26px rgba(242,183,5,.45)}
+.btn-green{background:var(--verde);color:#fff;box-shadow:0 6px 18px rgba(22,163,74,.35)}
+.btn-green:hover{background:var(--verde-dark);transform:translateY(-2px);box-shadow:0 10px 26px rgba(22,163,74,.45)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}
+.btn-outline:hover{background:rgba(255,255,255,.14);border-color:#fff;transform:translateY(-2px)}
+.btn-outline.dark{color:var(--tierra);border-color:var(--tierra)}
+.btn-outline.dark:hover{background:var(--tierra);color:var(--crema)}
+.btn-sm{padding:11px 20px;font-size:var(--fs-sm)}
+
+/* Tarjetas de producto */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4)}
+.card{background:var(--blanco);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--sombra-sm);transition:transform var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease);display:flex;flex-direction:column;border:1px solid rgba(63,45,30,.06)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.card-img{height:190px;background-size:cover;background-position:center;position:relative;transition:transform var(--t-slow) var(--ease)}
+.card-img-wrap{overflow:hidden}
+.card:hover .card-img{transform:scale(1.05)}
+.card-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h4{font-size:1.1rem;font-family:var(--f-display)}
+.card-body .origen{font-size:.8rem;color:var(--tierra-soft)}
+.card-body p{font-size:var(--fs-sm);color:var(--tierra-soft);flex:1}
+.brands{font-size:var(--fs-xs);color:var(--chile);font-weight:700;letter-spacing:.02em}
+
+/* Pestañas del catálogo (accesibles: aria-selected) */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:var(--sp-6)}
+.tab{padding:11px 19px;border-radius:var(--r-full);background:var(--blanco);border:1px solid rgba(63,45,30,.12);font-weight:600;font-size:.9rem;cursor:pointer;transition:all var(--t-fast) var(--ease);color:var(--tierra-soft)}
+.tab:hover{border-color:var(--choclo);transform:translateY(-1px)}
+.tab.active{background:var(--choclo);color:var(--tierra-900);border-color:var(--choclo);box-shadow:0 4px 14px rgba(242,183,5,.35)}
+.panel{display:none;animation:fade var(--t-slow) var(--ease)}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.panel-intro{text-align:center;max-width:680px;margin:0 auto var(--sp-6);color:var(--tierra-soft);font-size:1.05rem}
+.panel-cta{text-align:center;margin-top:var(--sp-6)}
+
+/* ── 4 · SECCIONES ───────────────────────────────────────────────── */
+
+/* Header — glass sobre el contenido al hacer scroll */
+header{position:sticky;top:0;z-index:100;background:var(--glass-claro);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid rgba(63,45,30,.08);transition:box-shadow var(--t-med)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+.logo-link{display:flex;align-items:center;gap:13px}
+.logo-img{width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 4px 14px rgba(63,45,30,.2);border:2px solid var(--choclo)}
+.logo-txt{font-family:var(--f-display);font-weight:900;font-size:1.35rem;line-height:1}
+.logo-txt small{display:block;font-family:var(--f-ui);font-weight:600;font-size:.56rem;letter-spacing:.24em;color:var(--chile);text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-weight:600;font-size:.94rem;position:relative;padding:4px 0}
+.nav-links a:not(.soc)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--choclo);transition:width var(--t-med) var(--ease)}
+.nav-links a:hover::after{width:100%}
+.nav-social{display:flex;gap:8px}
+.nav-social a{width:36px;height:36px;border-radius:50%;background:var(--tierra);color:var(--crema);display:flex;align-items:center;justify-content:center;transition:background var(--t-fast),transform var(--t-fast)}
+.nav-social a:hover{background:var(--chile);transform:translateY(-2px)}
+.nav-social a::after{display:none}
+.burger{display:none;font-size:1.6rem;cursor:pointer;background:none;border:none;color:var(--tierra);padding:6px 10px;border-radius:var(--r-sm)}
+
+/* Hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:linear-gradient(100deg,rgba(10,24,14,.94) 0%,rgba(10,24,14,.78) 45%,rgba(10,24,14,.55) 100%),url('assets/img/tienda-interior.jpg') center/cover}
+.hero-inner{display:flex;align-items:center;gap:var(--sp-7);position:relative;z-index:2}
+.hero-text{flex:1;min-width:0}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:var(--glass-oscuro);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--glass-borde);padding:10px 20px;border-radius:var(--r-full);color:#fff;font-size:var(--fs-sm);font-weight:600;margin-bottom:var(--sp-5)}
+.hero-chip .dotv{width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 4px rgba(22,163,74,.3)}
+.hero h1{font-size:var(--fs-hero);line-height:1.06;max-width:15ch;margin-bottom:var(--sp-5);text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero h1 .latino{color:var(--choclo)}
+.hero p.claim{font-size:var(--fs-lead);max-width:50ch;color:rgba(255,255,255,.92);font-weight:300;margin-bottom:var(--sp-6);text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.hero-ctas{display:flex;gap:var(--sp-4);flex-wrap:wrap}
+.hero-micro{margin-top:var(--sp-5);font-size:var(--fs-sm);color:rgba(255,255,255,.85)}
+.hero-micro a{color:#7ee29a;font-weight:600}
+.scroll-ind{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.8);font-size:1.6rem;animation:bob 1.8s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* Franja confianza */
+.trust{background:var(--crema-2);padding:var(--sp-6) 0}
+.trust-grid{display:flex;justify-content:center;gap:var(--sp-7);flex-wrap:wrap;text-align:center}
+.trust-item{display:flex;align-items:center;gap:var(--sp-3);font-weight:700}
+.trust-item .ico{font-size:1.8rem}
+.trust-item small{display:block;font-weight:400;font-size:var(--fs-xs);color:var(--tierra-soft)}
+
+/* Banda raíces */
+.raices{background:linear-gradient(160deg,var(--bosque-900),var(--bosque));color:var(--crema);padding:var(--sp-8) 0;text-align:center;position:relative;overflow:hidden}
+.raices h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:10px}
+.raices p{color:rgba(251,246,236,.75);max-width:60ch;margin:0 auto var(--sp-5)}
+.flags{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;font-size:1.9rem;margin-bottom:var(--sp-6)}
+.pillars{display:flex;justify-content:center;gap:var(--sp-5);flex-wrap:wrap;margin-top:var(--sp-2)}
+.pillar{background:rgba(255,255,255,.05);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);padding:22px 26px;width:260px;transition:transform var(--t-med) var(--ease),border-color var(--t-med)}
+.pillar:hover{transform:translateY(-4px);border-color:rgba(242,183,5,.4)}
+.pillar .pico{font-size:2rem;margin-bottom:8px}
+.pillar h4{font-family:var(--f-ui);font-weight:700;font-size:1.05rem;margin-bottom:6px;color:var(--choclo)}
+.pillar p{font-size:var(--fs-sm);color:rgba(251,246,236,.8);margin:0}
+
+/* Bienvenida */
+.welcome-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--sp-8);align-items:center}
+.welcome h2{font-size:var(--fs-h2);margin-bottom:var(--sp-4)}
+.welcome p{margin-bottom:var(--sp-4);color:var(--tierra-soft)}
+.welcome strong{color:var(--tierra)}
+.welcome-img{aspect-ratio:4/5;border-radius:var(--r-lg);box-shadow:var(--sombra);background-size:cover;background-position:center}
+
+/* Galería carrusel */
+.gallery{padding:var(--sp-8) 0;background:var(--crema-2);overflow:hidden}
+.gallery .sec-head{margin-bottom:var(--sp-6)}
+.marquee-wrap{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee{display:flex;gap:18px;width:max-content;animation:marq 48s linear infinite}
+.marquee:hover{animation-play-state:paused}
+.gphoto{width:300px;height:215px;flex:0 0 auto;border-radius:var(--r-md);object-fit:cover;box-shadow:var(--sombra-sm)}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Catálogo */
+.cat{background:var(--crema-2)}
+.sec-head{text-align:center;max-width:720px;margin:0 auto var(--sp-7)}
+.sec-head h2{font-size:var(--fs-h2);margin-bottom:var(--sp-3)}
+.sec-head p{color:var(--tierra-soft)}
+.frescos-banner{background:linear-gradient(135deg,var(--verde),var(--verde-dark));color:#fff;border-radius:var(--r-lg);padding:38px 40px;text-align:center;box-shadow:var(--sombra)}
+.frescos-banner h3{font-size:1.6rem;margin-bottom:10px;color:#fff}
+.frescos-banner p{max-width:60ch;margin:0 auto 8px;color:rgba(255,255,255,.92)}
+.frescos-banner .lista{font-weight:600;margin-top:10px}
+
+/* Marcas */
+.marcas{background:var(--crema);padding:var(--sp-8) 0;text-align:center}
+.marcas .pills{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;max-width:920px;margin:var(--sp-5) auto 0}
+.brand-pill{background:#fff;border:1px solid rgba(63,45,30,.1);border-radius:var(--r-full);padding:12px 22px;font-weight:800;font-size:1.02rem;color:var(--tierra);box-shadow:var(--sombra-sm);transition:transform var(--t-fast) var(--ease),border-color var(--t-fast),color var(--t-fast)}
+.brand-pill:hover{transform:translateY(-3px);border-color:var(--choclo);color:var(--choclo-dark)}
+.marcas .nota{font-size:var(--fs-sm);color:var(--tierra-soft);margin-top:var(--sp-5);font-style:italic}
+
+/* Semáforo del picante */
+.semaforo{background:var(--crema-2)}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4);margin-bottom:var(--sp-5)}
+.level{border-radius:var(--r-md);padding:22px 18px;cursor:pointer;text-align:center;color:#fff;transition:transform var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease);border:3px solid transparent}
+.level:hover{transform:translateY(-4px)}
+.level.sel{border-color:var(--tierra);transform:translateY(-4px);box-shadow:var(--sombra)}
+.level .lvl-ico{font-size:2rem}
+.level h4{font-family:var(--f-ui);font-weight:700;margin:6px 0 2px;font-size:1.05rem}
+.level small{font-size:var(--fs-xs);opacity:.92}
+.lv-suave{background:var(--verde)} .lv-medio{background:var(--choclo);color:var(--tierra-900)} .lv-medio small{opacity:.8}
+.lv-picante{background:var(--naranja)} .lv-extremo{background:var(--chile)}
+.sem-result{background:var(--blanco);border-radius:var(--r-lg);padding:26px 28px;box-shadow:var(--sombra-sm);display:flex;gap:22px;align-items:center;flex-wrap:wrap;min-height:90px;border:1px solid rgba(63,45,30,.06)}
+.sem-result .big{font-size:3rem}
+.sem-result .txt{flex:1;min-width:220px}
+.sem-result h4{font-family:var(--f-display);font-size:1.3rem;margin-bottom:6px}
+.sem-result p{font-size:.92rem;color:var(--tierra-soft);margin-bottom:10px}
+
+/* Visítanos — paneles glass sobre fondo espresso con textura de foto */
+.visit{background:linear-gradient(rgba(10,24,14,.92),rgba(10,24,14,.94)),url('assets/img/mercado.jpg') center/cover fixed;color:var(--crema)}
+.visit .sec-head h2{color:var(--crema)} .visit .sec-head p{color:rgba(251,246,236,.7)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-6);margin-bottom:var(--sp-7)}
+.panelbox{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);padding:28px;box-shadow:var(--sombra-lg)}
+.panelbox h3{font-size:var(--fs-h3);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.hours-card{background:rgba(255,255,255,.05);border-radius:var(--r-md);padding:18px 20px;margin-bottom:16px}
+.hours-card h4{font-family:var(--f-ui);font-weight:700;font-size:1rem;margin-bottom:4px;color:var(--choclo)}
+.hours-card .sub{font-size:var(--fs-xs);color:rgba(251,246,236,.6);margin-bottom:12px}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:700;padding:5px 12px;border-radius:var(--r-full);margin-bottom:12px}
+.status .dot{width:9px;height:9px;border-radius:50%}
+.status.open{background:rgba(22,163,74,.25);color:#7ee29a} .status.open .dot{background:#56d97e;box-shadow:0 0 0 4px rgba(86,217,126,.25)}
+.status.closed{background:rgba(193,53,43,.2);color:#f0998f} .status.closed .dot{background:var(--chile)}
+table.hours{width:100%;border-collapse:collapse;font-size:.9rem}
+table.hours td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+table.hours td:last-child{text-align:right;font-weight:600}
+table.hours tr:last-child td{border-bottom:none}
+.addr{font-size:.92rem;line-height:1.8;margin-bottom:18px} .addr strong{color:var(--choclo)}
+.map-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.how{display:flex;flex-direction:column;gap:8px;font-size:.88rem;color:rgba(251,246,236,.8)}
+/* Plano */
+.plano{background:rgba(0,0,0,.22);border-radius:var(--r-md);padding:22px}
+.plano-zone{border:1px dashed rgba(255,255,255,.25);border-radius:var(--r-sm);padding:16px;margin-bottom:16px;position:relative}
+.plano-zone .ztag{position:absolute;top:-10px;left:14px;background:var(--bosque-900);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:2px 10px;border-radius:var(--r-full);color:rgba(251,246,236,.75)}
+.stalls{display:flex;gap:10px;flex-wrap:wrap}
+.stall{flex:1;min-width:60px;height:54px;border-radius:9px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:.74rem;color:rgba(251,246,236,.45);font-weight:600}
+.stall.ours{background:var(--choclo);color:var(--tierra-900);font-weight:800;font-size:.85rem;cursor:pointer;animation:pulse 2s infinite;position:relative}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,183,5,.55)}70%{box-shadow:0 0 0 12px rgba(242,183,5,0)}100%{box-shadow:0 0 0 0 rgba(242,183,5,0)}}
+.stall.ours:hover{transform:scale(1.05)}
+.stall .tip{position:absolute;bottom:120%;left:50%;transform:translateX(-50%);width:210px;background:var(--crema);color:var(--tierra);font-size:.74rem;font-weight:400;padding:10px 12px;border-radius:var(--r-sm);opacity:0;visibility:hidden;transition:opacity var(--t-fast);box-shadow:var(--sombra);z-index:5;line-height:1.4}
+.stall.ours:hover .tip,.stall.ours:focus-visible .tip{opacity:1;visibility:visible}
+.you-here{text-align:center;font-size:.74rem;color:rgba(251,246,236,.5);margin:6px 0 14px}
+.plano-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:var(--fs-xs);color:rgba(251,246,236,.7);margin-top:6px}
+.plano-legend span{display:flex;align-items:center;gap:7px}
+.dot-leg{width:13px;height:13px;border-radius:4px;display:inline-block}
+
+/* QR */
+.qr-band{background:var(--crema);padding:var(--sp-8) 0}
+.qr-row{display:flex;gap:var(--sp-5);justify-content:center;flex-wrap:wrap;margin-top:var(--sp-2)}
+.qr-card{background:var(--blanco);border-radius:var(--r-md);padding:18px;text-align:center;transition:transform var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease);box-shadow:var(--sombra-sm);width:190px;border:1px solid rgba(63,45,30,.07)}
+.qr-card:hover{transform:translateY(-5px);box-shadow:var(--sombra)}
+.qr-card img{width:100%;border-radius:var(--r-sm)}
+.qr-card span{display:block;margin-top:14px;font-size:.9rem;font-weight:700;color:var(--tierra);line-height:1.3}
+.qr-card small{display:block;font-size:.74rem;color:var(--tierra-soft);font-weight:400;margin-top:2px}
+
+/* Footer */
+footer{background:var(--bosque-900);color:rgba(251,246,236,.75);padding:var(--sp-8) 0 var(--sp-6)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--sp-6);margin-bottom:var(--sp-6)}
+.foot-logo{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.foot-logo img{width:60px;height:60px;border-radius:50%;border:2px solid var(--choclo)}
+.foot-logo b{font-family:var(--f-display);font-size:1.3rem;color:var(--crema)}
+footer h5{color:var(--crema);font-size:.95rem;margin-bottom:14px;letter-spacing:.05em}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.9rem}
+footer ul a:hover{color:var(--choclo)}
+.foot-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.foot-social a{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);padding:8px 14px;border-radius:var(--r-full);font-size:.84rem;font-weight:600;transition:background var(--t-fast),color var(--t-fast)}
+.foot-social a:hover{background:var(--choclo);color:var(--tierra-900)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;font-size:.82rem;color:rgba(251,246,236,.5)}
+
+/* WhatsApp flotante */
+.float-wa{position:fixed;bottom:26px;right:26px;z-index:200;display:flex;align-items:center}
+.float-wa .wa-tip{background:var(--glass-claro);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--tierra);font-size:.85rem;font-weight:600;padding:11px 16px;border-radius:var(--r-full);box-shadow:var(--sombra);margin-right:12px;white-space:nowrap;opacity:0;transform:translateX(10px);transition:opacity var(--t-med),transform var(--t-med)}
+.float-wa:hover .wa-tip,.float-wa:focus-visible .wa-tip{opacity:1;transform:translateX(0)}
+.wa-btn{width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform var(--t-med) var(--ease)}
+.wa-btn .ico-svg{width:32px;height:32px}
+.wa-btn:hover{transform:scale(1.08)}
+
+/* ── 5 · MOVIMIENTO — revelado al hacer scroll ───────────────────── */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity var(--t-slow) var(--ease),transform var(--t-slow) var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* Accesibilidad: si el usuario pide menos movimiento, se respeta TODO */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .marquee-wrap{overflow-x:auto}
+  html{scroll-behavior:auto}
+}
+
+/* ── 6 · RESPONSIVE ──────────────────────────────────────────────── */
+@media(max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:880px){
+  .nav-links{position:fixed;top:82px;right:0;width:78%;max-width:320px;height:calc(100vh - 82px);background:var(--crema);flex-direction:column;padding:30px;gap:18px;box-shadow:var(--sombra);transform:translateX(100%);transition:transform var(--t-med) var(--ease);align-items:flex-start}
+  .nav-links.open{transform:translateX(0)} .burger{display:block}
+  .welcome-grid{grid-template-columns:1fr;gap:var(--sp-6)} .welcome-img{aspect-ratio:16/10}
+  .visit-grid{grid-template-columns:1fr} .levels{grid-template-columns:1fr 1fr} .foot-grid{grid-template-columns:1fr;gap:var(--sp-5)}
+  .visit{background-attachment:scroll}
+}
+@media(max-width:560px){
+  section{padding:var(--sp-7) 0}
+  .cards{grid-template-columns:1fr}
+  .trust-grid{flex-direction:column;align-items:center;gap:18px}
+  .float-wa .wa-tip{display:none} .pillar{width:100%}
+  .hero-chip{font-size:.74rem;padding:9px 14px}
+  .hero-ctas{width:100%}
+  .hero-ctas .btn{width:100%;white-space:normal;font-size:.9rem;padding:14px 16px}
+  .btn{white-space:normal}
+  .map-btns .btn,.qr-card{width:100%}
+  .map-btns{flex-direction:column}
+  .gphoto{width:230px;height:165px} .marquee{animation-duration:36s}
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- Iconos SVG del sistema (se reutilizan con <use>) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.26.07 1.64.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.26.06-1.64.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.74 0 8.33 0 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05 0 8.33 0 8.74 0 12s0 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.48 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 24 8.74 24 12 24s3.67 0 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.07-1.28.07-1.69.07-4.95s0-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67 0 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4m7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.9 7 9.9 9.9 0 0 1-9.9 9.87m8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.38"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 0C7.03 0 3 4.03 3 9c0 6.75 9 15 9 15s9-8.25 9-15c0-4.97-4.03-9-9-9m0 12.5A3.5 3.5 0 1 1 12 5.5a3.5 3.5 0 0 1 0 7"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo-link"><img src="assets/img/logo-oficial.png" alt="AL NORTE DEL SUR" class="logo-img"><span class="logo-txt">AL NORTE DEL SUR<small>Productos Latinos · València</small></span></a>
+    <nav aria-label="Principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#picante">Picante</a></li>
+        <li><a href="#visitanos">Visítanos</a></li>
+        <li class="nav-social">
+          <a class="soc" href="https://instagram.com/alnortedelsur_es" target="_blank" rel="noopener" aria-label="Instagram @alnortedelsur_es"><svg class="ico-svg" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a class="soc" href="https://facebook.com/alnortedelsur0107" target="_blank" rel="noopener" aria-label="Facebook Al Norte del Sur"><svg class="ico-svg" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        </li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-chip"><span class="dotv" aria-hidden="true"></span> Mercado de Ruzafa · València · Pasillo 1</span>
+        <h1>El sabor de casa: <span class="latino">productos latinos</span> en el corazón de València.</h1>
+        <p class="claim">En <strong>AL NORTE DEL SUR</strong> encontrarás los productos latinos auténticos que te devuelven a tu tierra: de origen certificado, naturales y con el aroma inconfundible de Latinoamérica.</p>
+        <div class="hero-ctas">
+          <a href="#catalogo" class="btn btn-primary">Ver el catálogo</a>
+          <a href="#visitanos" class="btn btn-outline"><svg class="ico-svg" aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar</a>
+        </div>
+        <p class="hero-micro">Abierto toda la semana · Lun–Sáb desde las 8:00 (Puestos 213-220, interior) · Domingos 9:30–13:00 (Puestos 107-108, exterior) · <a href="https://wa.me/34671339005" target="_blank" rel="noopener">671 33 90 05</a></p>
+      </div>
+    </div>
+  </div>
+  <a href="#raices" class="scroll-ind" aria-label="Bajar al contenido">▾</a>
+</section>
+
+<!-- FRANJA CONFIANZA -->
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🌿</span><div>Frescura Garantizada<small>Repuesto cada semana</small></div></div>
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🏷️</span><div>Origen Certificado<small>Trazabilidad latinoamericana</small></div></div>
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">⭐</span><div>Calidad Premium<small>Marcas de confianza</small></div></div>
+  </div>
+</div>
+
+<!-- BANDA IDENTIDAD LATINA -->
+<section class="raices" id="raices">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--choclo)">Nuestras raíces</span>
+    <h2>Un pedacito de cada país de Latinoamérica</h2>
+    <p>De México al sur del continente: traemos a València los sabores, las marcas y los productos con los que creciste. Auténtico, natural y de origen.</p>
+    <div class="flags" aria-hidden="true">🇲🇽 🇬🇹 🇸🇻 🇭🇳 🇳🇮 🇨🇷 🇵🇦 🇨🇴 🇻🇪 🇪🇨 🇵🇪 🇧🇴 🇨🇱 🇦🇷 🇺🇾 🇵🇾 🇧🇷 🇩🇴 🇨🇺 🇵🇷</div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">🌎</div><h4>Origen auténtico</h4><p>Productos importados directamente de Latinoamérica, con su marca y sabor de siempre.</p></div>
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">🍃</div><h4>Sabor natural</h4><p>Géneros frescos, granos, pulpas y especias puras, sin perder su esencia.</p></div>
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">❤️</div><h4>Tradición latina</h4><p>Atendido por gente que conoce tu cocina y te asesora como en casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIENVENIDA -->
+<section class="welcome" id="bienvenida">
+  <div class="wrap welcome-grid">
+    <div class="reveal">
+      <span class="eyebrow">Bienvenido</span>
+      <h2>Tu despensa latina en València</h2>
+      <p>Cierra los ojos y déjate llevar: el dorado del <strong>maíz</strong>, el aroma de los <strong>quesos llaneros y costeños</strong>, el color de los <strong>ajíes</strong> y la dulzura de las <strong>pulpas de fruta</strong>. En <strong>AL NORTE DEL SUR</strong> no vendemos solo productos, cuidamos un trocito de tu historia.</p>
+      <p>Llenamos nuestros puestos del Mercado de Ruzafa con marcas de confianza como <strong>Goya, Coexito, América, Diana</strong> y <strong>P.A.N.</strong>, y la garantía de origen y frescura en todo lo que te llevas.</p>
+      <p>Ven, huele, elige y conversa. Te esperamos donde el sabor latino se siente de verdad. 🌎</p>
+      <div style="margin-top:26px"><a href="#catalogo" class="btn btn-primary btn-sm">Descubre nuestro catálogo →</a></div>
+    </div>
+    <div class="welcome-img reveal" style="background-image:url('assets/img/quesos-nevera.jpg')" role="img" aria-label="Nevera de quesos latinos de la tienda"></div>
+  </div>
+</section>
+
+<!-- GALERÍA CARRUSEL -->
+<section class="gallery" id="galeria">
+  <div class="wrap sec-head">
+    <span class="eyebrow">Galería</span>
+    <h2>Así es nuestra tienda 🌎</h2>
+    <p>Un paseo por nuestros puestos del Mercado de Ruzafa — fotos reales.</p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <img class="gphoto" src="assets/img/tienda-interior.jpg" alt="Estantería Goya" loading="lazy">
+      <img class="gphoto" src="assets/img/quesos-nevera.jpg" alt="Nevera de quesos latinos" loading="lazy">
+      <img class="gphoto" src="assets/img/queso-mano.jpg" alt="Queso de mano" loading="lazy">
+      <img class="gphoto" src="assets/img/embutidos-real.jpg" alt="Charcutería" loading="lazy">
+      <img class="gphoto" src="assets/img/maiz-trillado.jpg" alt="Maíz trillado" loading="lazy">
+      <img class="gphoto" src="assets/img/chiles-secos-real.jpg" alt="Chiles secos" loading="lazy">
+      <img class="gphoto" src="assets/img/ajies-real.jpg" alt="Ajíes peruanos" loading="lazy">
+      <img class="gphoto" src="assets/img/salsas-real.jpg" alt="Salsas" loading="lazy">
+      <img class="gphoto" src="assets/img/conservas-real.jpg" alt="Conservas Goya" loading="lazy">
+      <img class="gphoto" src="assets/img/snacks-real.jpg" alt="Snacks latinos" loading="lazy">
+      <img class="gphoto" src="assets/img/bebidas-real.jpg" alt="Bebidas latinas" loading="lazy">
+      <img class="gphoto" src="assets/img/arepas-real.jpg" alt="Arepas" loading="lazy">
+      <!-- duplicado para bucle continuo -->
+      <img class="gphoto" src="assets/img/tienda-interior.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/quesos-nevera.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/queso-mano.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/embutidos-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/maiz-trillado.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/chiles-secos-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/ajies-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/salsas-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/conservas-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/snacks-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/bebidas-real.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img class="gphoto" src="assets/img/arepas-real.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="cat" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El Catálogo de Raíces</span>
+      <h2>Lo mejor de Latinoamérica, escogido a mano</h2>
+      <p>Fotos reales de nuestros puestos. Marcas de confianza, origen certificado y la frescura de siempre.</p>
+    </div>
+
+    <div class="tabs" id="tabs" role="tablist" aria-label="Categorías del catálogo">
+      <button class="tab active" data-tab="quesos" role="tab" aria-selected="true">🧀 Quesos y Charcutería</button>
+      <button class="tab" data-tab="granos" role="tab" aria-selected="false">🌽 Maíces y Granos</button>
+      <button class="tab" data-tab="harinas" role="tab" aria-selected="false">🫓 Harinas y Arepas</button>
+      <button class="tab" data-tab="picantes" role="tab" aria-selected="false">🌶️ Chiles y Ajíes</button>
+      <button class="tab" data-tab="especias" role="tab" aria-selected="false">🧂 Especias y Salsas</button>
+      <button class="tab" data-tab="conservas" role="tab" aria-selected="false">🥫 Conservas y Pulpas</button>
+      <button class="tab" data-tab="snacks" role="tab" aria-selected="false">🍿 Snacks y Dulces</button>
+      <button class="tab" data-tab="bebidas" role="tab" aria-selected="false">🥤 Bebidas y Mate</button>
+      <button class="tab" data-tab="frescos" role="tab" aria-selected="false">🥬 Frescos</button>
+    </div>
+
+    <!-- QUESOS Y CHARCUTERÍA -->
+    <div class="panel active" id="quesos">
+      <p class="panel-intro">El sabor que reconoces al instante: quesos latinos auténticos, embutidos tradicionales y lácteos importados.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/quesos-nevera.jpg')"></div></div><div class="card-body"><h4>Quesos Latinos</h4><span class="origen">Costeño · llanero · fresco latino</span><p>Para arepas, cachapas y patacones. De nuestra nevera a tu mesa.</p><span class="badge fresca">🌿 Frescura Garantizada</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/queso-mano.jpg')"></div></div><div class="card-body"><h4>Queso de Mano y Fresco</h4><span class="origen">Galmara · cremoso y suave</span><p>Tierno y elástico, ideal para la cachapa o solo.</p><span class="badge fresca">🌿 Frescura Garantizada</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/embutidos-real.jpg')"></div></div><div class="card-body"><h4>Charcutería Tradicional</h4><span class="origen">Chorizo · ranchera · arepas Goya</span><p>Embutidos de elaboración tradicional, en refrigeración continua.</p><span class="badge fresca">🌿 Frescura Garantizada</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/leche-real.jpg')"></div></div><div class="card-body"><h4>Leche en Polvo</h4><span class="origen">La Campiña · Goya · Milklym</span><p>La de siempre, para tu café y tus recetas.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- MAÍCES Y GRANOS -->
+    <div class="panel" id="granos">
+      <p class="panel-intro">El corazón de la cocina latina: maíces, granos y legumbres en su máxima variedad.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/maiz-trillado.jpg')"></div></div><div class="card-body"><h4>Maíz Trillado</h4><span class="origen">Amarillo y blanco</span><p>Para mazamorra, mote y arepa de maíz pelado.</p><span class="brands">Goya · América</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/maiz-cancha.jpg')"></div></div><div class="card-body"><h4>Maíz Cancha y Chulpe</h4><span class="origen">Para tostar · habas secas</span><p>El piqueo andino crujiente por excelencia.</p><span class="brands">América · Tropical</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/maiz-morado.jpg')"></div></div><div class="card-body"><h4>Maíz Morado</h4><span class="origen">El Plebeyo</span><p>Para la chicha morada y la mazamorra.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/chuno-real.jpg')"></div></div><div class="card-body"><h4>Chuño y Frijoles</h4><span class="origen">Chuño negro/blanco · frijol rojo y negro</span><p>Tubérculo andino deshidratado y legumbres de siempre.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- HARINAS Y AREPAS -->
+    <div class="panel" id="harinas">
+      <p class="panel-intro">Para arepas, hallacas, cachapas, pan de yuca y mucho más. La base de cada desayuno latino.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/harinas-real.jpg')"></div></div><div class="card-body"><h4>Harinas de Maíz y Mandioca</h4><span class="origen">Masarepa · farinha · polvilho · tapioca</span><p>Harina P.A.N., masarepa Goya y harinas para pan de queijo.</p><span class="brands">P.A.N. · Goya · Yoki</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/arepas-real.jpg')"></div></div><div class="card-body"><h4>Arepas Listas</h4><span class="origen">Marlu · arepas colombianas</span><p>Recién hechas, listas para la plancha.</p><span class="badge fresca">🌿 Frescura Garantizada</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/tortillas-real.jpg')"></div></div><div class="card-body"><h4>Tortillas y Totopos</h4><span class="origen">Maíz Maya · Goya</span><p>Tortillas de maíz y trigo, totopos y tostadas.</p><span class="brands">Goya · Maya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/harina-cachapas.jpg')"></div></div><div class="card-body"><h4>Cachapas y Masas</h4><span class="origen">Harina de cachapas La Mantuana</span><p>Para la cachapa dulce venezolana.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- CHILES Y AJÍES -->
+    <div class="panel" id="picantes">
+      <p class="panel-intro">El carácter de nuestra cocina. ¿No sabes cuál elegir? Prueba el <a href="#picante" style="color:var(--chile);font-weight:700">Semáforo del Picante 🌶️</a></p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/chiles-secos-real.jpg')"></div></div><div class="card-body"><h4>Chiles Secos Mexicanos</h4><span class="origen">Guajillo · ancho · mulato</span><p>Para adobos, moles y salsas de sabor profundo.</p><span class="brands">Sarape</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/ajies-real.jpg')"></div></div><div class="card-body"><h4>Ajíes Peruanos</h4><span class="origen">Ají panca · ají mirasol</span><p>El alma de la cocina peruana: color y picor noble.</p><span class="brands">La Latina</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/salsas-real.jpg')"></div></div><div class="card-body"><h4>Salsas Picantes</h4><span class="origen">Valentina · El Botanero · pulparindo</span><p>Para darle fuego a todo, a tu nivel.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/achiote-real.jpg')"></div></div><div class="card-body"><h4>Pasta de Ají y Achiote</h4><span class="origen">Ají amarillo · rocoto · panca · onoto</span><p>Color y sabor de casa para tus guisos.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- ESPECIAS Y SALSAS -->
+    <div class="panel" id="especias">
+      <p class="panel-intro">El toque secreto: especias puras, adobos completos y salsas listas que definen el sabor del continente.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/especias-real.jpg')"></div></div><div class="card-body"><h4>Especias Puras</h4><span class="origen">Comino · orégano · canela · Tajín · ají molido</span><p>El color y aroma de casa para arroces y guisos.</p><span class="brands">América · Goya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/adobos-real.jpg')"></div></div><div class="card-body"><h4>Adobos y Sazonadores</h4><span class="origen">Adobo y Sazonador Total Goya · Caldo Calnort</span><p>La base de todo buen sofrito latino, en un paso.</p><span class="brands">Goya · Calnort</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/salsas-real.jpg')"></div></div><div class="card-body"><h4>Salsas Listas</h4><span class="origen">Valentina · Siyau Kikko · Maggi</span><p>El sabor latino auténtico, listo para servir.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/achiote-real.jpg')"></div></div><div class="card-body"><h4>Achiote y Pastas</h4><span class="origen">Onoto · pasta de maní · aceitunas</span><p>Para teñir y dar sabor a tus platos.</p><span class="brands">Nativo · Ilé · Coexito</span><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- CONSERVAS Y PULPAS -->
+    <div class="panel" id="conservas">
+      <p class="panel-intro">Toda la despensa enlatada y las pulpas de fruta natural para tus jugos y postres.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/conservas-real.jpg')"></div></div><div class="card-body"><h4>Conservas Goya</h4><span class="origen">Frijoles · diablitos · salsas · maíz</span><p>Toda la pared de conservas que conoces, lista para usar.</p><span class="brands">Goya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/pulpas.jpg')"></div></div><div class="card-body"><h4>Pulpas de Fruta Natural</h4><span class="origen">Guanábana · maracuyá · lulo · mora · guayaba</span><p>100% fruta, para batidos y jugos como en casa.</p><span class="brands">Goya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/diablitos.jpg')"></div></div><div class="card-body"><h4>Diablitos y Untables</h4><span class="origen">Jamón endiablado · pasta de maní</span><p>El clásico de la merienda latina.</p><span class="brands">Goya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/conservas-real.jpg')"></div></div><div class="card-body"><h4>Frijoles y Moles</h4><span class="origen">Frijol negro guisado · refrito · mole poblano</span><p>El acompañante listo en minutos.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- SNACKS Y DULCES -->
+    <div class="panel" id="snacks">
+      <p class="panel-intro">El antojo de siempre: tostones, platanitos, galletas y dulces típicos.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/snacks-real.jpg')"></div></div><div class="card-body"><h4>Snacks Salados</h4><span class="origen">Zambos · tostones · platanitos · alboroto</span><p>El piqueo crujiente para compartir.</p><span class="brands">Diana · Goya</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/dulces-real.jpg')"></div></div><div class="card-body"><h4>Galletas y Dulces</h4><span class="origen">Ducales · Chocolinas · Festival · alfajores</span><p>Los dulces con los que creciste.</p><span class="brands">Noel · Mardel</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/tortillas-real.jpg')"></div></div><div class="card-body"><h4>Totopos y Nachos</h4><span class="origen">Maíz Maya · Diana</span><p>Para tus salsas y guacamole.</p><span class="brands">Maya · Diana</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/panela.jpg')"></div></div><div class="card-body"><h4>Panela y Endulzantes</h4><span class="origen">Panela fraccionada · dulces de guayaba</span><p>El dulzor natural de siempre.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- BEBIDAS Y MATE -->
+    <div class="panel" id="bebidas">
+      <p class="panel-intro">Las bebidas de tu país y la yerba mate de siempre, para sentirte como en casa.</p>
+      <div class="cards">
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/bebidas-real.jpg')"></div></div><div class="card-body"><h4>Gaseosas Latinas</h4><span class="origen">Inca Kola · Postobón · Frescolita · Maltín</span><p>El refresco que sabe a tu tierra.</p><span class="brands">Postobón · Pony Malta</span><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/bebidas-real.jpg')"></div></div><div class="card-body"><h4>Chicha y Refrescos</h4><span class="origen">Chicha El Chichero · gaseosas import.</span><p>Tradición líquida latinoamericana.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/yerba-mate-taragui.jpg')"></div></div><div class="card-body"><h4>Yerba Mate</h4><span class="origen">Taragüi · La Merced · Canarias · Playadito</span><p>Para tu mate de cada día.</p><span class="badge origen">🏷️ Origen Certificado</span></div></div>
+        <div class="card"><div class="card-img-wrap"><div class="card-img" style="background-image:url('assets/img/cafe-aguila-roja.jpg')"></div></div><div class="card-body"><h4>Café e Infusiones</h4><span class="origen">Café Fama de América</span><p>El café latino para empezar el día.</p><span class="badge premium">⭐ Calidad Premium</span></div></div>
+      </div>
+      <div class="panel-cta"><a href="#visitanos" class="btn btn-outline dark">Encuéntralo hoy en Ruzafa</a></div>
+    </div>
+
+    <!-- FRESCOS -->
+    <div class="panel" id="frescos">
+      <div class="frescos-banner">
+        <h3>🥬 Frescos de Temporada — directos de Latinoamérica</h3>
+        <p>Recibimos cada semana género fresco seleccionado a mano. Verduras y tubérculos esenciales de la agricultura latinoamericana, en su punto.</p>
+        <p class="lista">Plátano macho (verde y maduro) · Papa criolla · Yuca · Ñame · Malanga · Aguacate · Chayota · Ají dulce · Cilantro · Granadilla · Maracuyá</p>
+        <p style="margin-top:14px">Pregúntanos por la <strong>disponibilidad de hoy</strong> — el fresco vuela.</p>
+        <div style="margin-top:22px"><a href="https://wa.me/34671339005?text=%C2%A1Hola!%20%C2%BFQu%C3%A9%20frescos%20tienen%20hoy%3F" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ico-svg" aria-hidden="true"><use href="#i-whatsapp"/></svg> Consultar disponibilidad</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS DE CONFIANZA -->
+<section class="marcas" id="marcas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Marcas de confianza</span>
+      <h2>Las marcas latinas que buscas, todas aquí</h2>
+      <p>Trabajamos con las marcas líderes de Latinoamérica para que encuentres siempre el sabor de tu tierra.</p>
+    </div>
+    <div class="pills">
+      <span class="brand-pill">Goya</span>
+      <span class="brand-pill">Harina P.A.N.</span>
+      <span class="brand-pill">Coexito</span>
+      <span class="brand-pill">Diana</span>
+      <span class="brand-pill">América</span>
+      <span class="brand-pill">Maya</span>
+      <span class="brand-pill">Valentina</span>
+      <span class="brand-pill">Tajín</span>
+      <span class="brand-pill">Inca Kola</span>
+      <span class="brand-pill">Postobón</span>
+      <span class="brand-pill">Maltín Polar</span>
+      <span class="brand-pill">Pony Malta</span>
+      <span class="brand-pill">Quaker</span>
+      <span class="brand-pill">Yoki</span>
+      <span class="brand-pill">Galmara</span>
+      <span class="brand-pill">Nativo</span>
+    </div>
+    <p class="nota">…y muchas más. ¿Buscas una marca en concreto? Pregúntanos por WhatsApp.</p>
+  </div>
+</section>
+
+<!-- SEMÁFORO DEL PICANTE -->
+<section class="semaforo" id="picante">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Para acertar con el picor</span>
+      <h2>🌶️ El Semáforo del Picante</h2>
+      <p>¿Cuánto aguantas? Elige tu nivel y te decimos qué llevarte.</p>
+    </div>
+    <div class="levels" id="levels">
+      <div class="level lv-suave sel" data-lv="0" role="button" tabindex="0" aria-pressed="true"><div class="lvl-ico" aria-hidden="true">🟢</div><h4>Suave</h4><small>Ají panca · ancho</small></div>
+      <div class="level lv-medio" data-lv="1" role="button" tabindex="0" aria-pressed="false"><div class="lvl-ico" aria-hidden="true">🟡</div><h4>Medio</h4><small>Ají amarillo · mulato</small></div>
+      <div class="level lv-picante" data-lv="2" role="button" tabindex="0" aria-pressed="false"><div class="lvl-ico" aria-hidden="true">🟠</div><h4>Picante</h4><small>Chile de árbol · chipotle</small></div>
+      <div class="level lv-extremo" data-lv="3" role="button" tabindex="0" aria-pressed="false"><div class="lvl-ico" aria-hidden="true">🔴</div><h4>Extremo</h4><small>Habanero · charapita</small></div>
+    </div>
+    <div class="sem-result" id="semResult" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- VISÍTANOS -->
+<section class="visit" id="visitanos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--choclo)">Dónde estamos</span>
+      <h2>Te esperamos en el Mercado de Ruzafa</h2>
+      <p>Dos puntos, un mismo sabor. No te pierdas: te lo ponemos fácil.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="panelbox reveal">
+        <h3>🕐 Nuestros horarios</h3>
+        <div class="hours-card">
+          <h4>Puestos 213-220 · Pasillo 1 ⭐ Principal</h4>
+          <div class="sub">Parte interior del mercado</div>
+          <div class="status" data-hours="interior"><span class="dot"></span><span class="lbl">—</span></div>
+          <table class="hours"><tr><td>Lunes a Sábado</td><td>8:00 – 14:30</td></tr><tr><td>Domingo</td><td>Cerrado</td></tr></table>
+        </div>
+        <div class="hours-card">
+          <h4>Puestos 107-108</h4>
+          <div class="sub">Parte exterior del mercado</div>
+          <div class="status" data-hours="exterior"><span class="dot"></span><span class="lbl">—</span></div>
+          <table class="hours"><tr><td>Lunes a Sábado</td><td>11:00 – 14:00 · 16:30 – 20:30</td></tr><tr><td>Domingo</td><td>9:30 – 13:00</td></tr></table>
+        </div>
+        <div class="addr" style="margin-top:6px"><strong>AL NORTE DEL SUR</strong><br>Mercado de Ruzafa · Carrer del Doctor Serrano, 5 · 46006 València</div>
+        <div class="map-btns">
+          <a href="https://www.google.com/maps/search/?api=1&query=Mercado+de+Ruzafa+Valencia" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ico-svg" aria-hidden="true"><use href="#i-pin"/></svg> Google Maps</a>
+          <a href="https://maps.apple.com/?q=Mercado+de+Ruzafa+Valencia" target="_blank" rel="noopener" class="btn btn-outline btn-sm"> Apple Maps</a>
+        </div>
+        <div class="how"><span>🚇 Metro: Xàtiva / Colón (5-10 min andando)</span><span>🚌 Bus: líneas que paran junto a Ruzafa</span><span>🅿️ Parking: aparcamiento cercano en la zona</span></div>
+      </div>
+      <div class="panelbox reveal">
+        <h3>🗺️ No te pierdas: estamos en dos puntos</h3>
+        <div class="plano">
+          <div class="plano-zone"><span class="ztag">Pasillo 1 · Interior (principal)</span>
+            <div class="stalls"><div class="stall">209</div><div class="stall">211</div><div class="stall ours" tabindex="0">213-220 ⭐<span class="tip">Puestos 213-220 · Pasillo 1 (principal) — Todo el surtido: quesos, granos, chiles, conservas y más.</span></div><div class="stall">222</div></div>
+          </div>
+          <div class="you-here">▲ Entrada principal · "Estás aquí" ▲</div>
+          <div class="plano-zone"><span class="ztag">Exterior del mercado</span>
+            <div class="stalls"><div class="stall">105</div><div class="stall ours" tabindex="0">107-108 ⭐<span class="tip">Puestos 107-108 — Nuestro segundo punto, en la zona exterior. ¡Fácil de encontrar!</span></div><div class="stall">110</div></div>
+          </div>
+          <div class="plano-legend"><span><i class="dot-leg" style="background:var(--choclo)"></i> Nuestros puestos</span><span><i class="dot-leg" style="background:rgba(255,255,255,.12)"></i> Otros puestos</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercado+de+Ruzafa+Valencia" target="_blank" rel="noopener" class="btn btn-green"><svg class="ico-svg" aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar a los Puestos 213-220 · Pasillo 1</a>
+      <p style="margin-top:16px;color:rgba(251,246,236,.7);font-size:.9rem">Te esperamos con el mejor género de Latinoamérica. 🌎</p>
+    </div>
+  </div>
+</section>
+
+<!-- QR -->
+<section class="qr-band" id="qr">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Escanea y guárdanos</span>
+      <h2>📲 Llévanos en tu móvil</h2>
+      <p>Escanea con la cámara para guardar nuestra ubicación, escribirnos o seguirnos.</p>
+    </div>
+    <div class="qr-row">
+      <a class="qr-card reveal" href="https://www.google.com/maps/search/?api=1&query=Mercado+de+Ruzafa+Valencia" target="_blank" rel="noopener"><img src="assets/qr/qr-ubicacion.png" alt="Código QR con la ubicación" loading="lazy"><span>📍 Cómo llegar<small>Mercado de Ruzafa</small></span></a>
+      <a class="qr-card reveal" href="https://wa.me/34671339005" target="_blank" rel="noopener"><img src="assets/qr/qr-whatsapp.png" alt="Código QR de WhatsApp" loading="lazy"><span>💬 WhatsApp<small>+34 671 339 005</small></span></a>
+      <a class="qr-card reveal" href="https://instagram.com/alnortedelsur_es" target="_blank" rel="noopener"><img src="assets/qr/qr-instagram.png" alt="Código QR de Instagram" loading="lazy"><span>📷 Instagram<small>@alnortedelsur_es</small></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/img/logo-oficial.png" alt=""><b>AL NORTE DEL SUR</b></div>
+        <p style="font-size:.9rem;max-width:40ch">La despensa de productos latinos más auténtica de València. Origen, naturalidad y calidad en el corazón del Mercado de Ruzafa.</p>
+        <div class="foot-social">
+          <a href="https://instagram.com/alnortedelsur_es" target="_blank" rel="noopener"><svg class="ico-svg" aria-hidden="true"><use href="#i-instagram"/></svg> Instagram</a>
+          <a href="https://facebook.com/alnortedelsur0107" target="_blank" rel="noopener"><svg class="ico-svg" aria-hidden="true"><use href="#i-facebook"/></svg> Facebook</a>
+          <a href="https://wa.me/34671339005" target="_blank" rel="noopener"><svg class="ico-svg" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <h5>Navegación</h5>
+        <ul><li><a href="#inicio">Inicio</a></li><li><a href="#catalogo">Catálogo</a></li><li><a href="#picante">Semáforo del Picante</a></li><li><a href="#visitanos">Visítanos</a></li></ul>
+      </div>
+      <div>
+        <h5>Encuéntranos</h5>
+        <ul><li>📍 Mercado de Ruzafa, València</li><li>🟡 Puestos 213-220 · Pasillo 1 (principal)</li><li>🟡 Puestos 107-108 (exterior)</li><li><a href="https://wa.me/34671339005" target="_blank" rel="noopener">💬 +34 671 339 005</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> AL NORTE DEL SUR · Mercado de Ruzafa, València · Frescura Garantizada · Origen Certificado · Calidad Premium</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="float-wa" href="https://wa.me/34671339005?text=¡Hola%20AL%20NORTE%20DEL%20SUR!%20👋%20Quería%20consultar%20si%20tienen%20disponible..." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-tip">💬 Consúltanos disponibilidad</span>
+  <span class="wa-btn"><svg class="ico-svg" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Menú móvil (con estado accesible aria-expanded)
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>{
+    const abierto=navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded',abierto);
+    burger.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');
+  });
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');burger.setAttribute('aria-expanded','false');}));
+
+  // Pestañas del catálogo (aria-selected sincronizado)
+  const tabs=document.querySelectorAll('.tab');
+  tabs.forEach(tab=>tab.addEventListener('click',()=>{
+    tabs.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');tab.setAttribute('aria-selected','true');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  }));
+
+  // Semáforo del picante (clic + teclado)
+  const semData=[
+    {ico:'🟢',t:'Ají Panca / Chile Ancho',d:'Sabor y color sin picor agresivo. Perfecto para adobos, moles y salsas suaves.',tip:'Tuéstalo 30 seg e hidrátalo 10 min antes de licuar para un sabor profundo.'},
+    {ico:'🟡',t:'Ají Amarillo / Chile Mulato',d:'El carácter de la cocina peruana. Cremoso y con picor noble.',tip:'Licúa el ají amarillo hidratado para un ají de gallina o papa a la huancaína.'},
+    {ico:'🟠',t:'Chile de Árbol / Chipotle',d:'Para los valientes. Picor firme y ahumado, ideal para salsas picantes.',tip:'Pocas unidades dan mucho fuego: añádelo poco a poco.'},
+    {ico:'🔴',t:'Habanero / Ají Charapita',d:'Solo para expertos. Picor intenso y frutal que define los platos más atrevidos.',tip:'Una pizca basta para encender cualquier plato.'}
+  ];
+  const semResult=document.getElementById('semResult'),levels=document.querySelectorAll('.level');
+  function renderSem(i){const d=semData[i];semResult.innerHTML=`<div class="big">${d.ico}</div><div class="txt"><h4>${d.t}</h4><p>${d.d}</p><p style="font-size:.85rem"><strong>💡 Tip:</strong> ${d.tip}</p><span class="badge origen">🏷️ Origen Certificado</span></div><a href="#visitanos" class="btn btn-primary btn-sm">Llévatelo hoy en Ruzafa</a>`;}
+  function selLevel(l){levels.forEach(x=>{x.classList.remove('sel');x.setAttribute('aria-pressed','false');});l.classList.add('sel');l.setAttribute('aria-pressed','true');renderSem(parseInt(l.dataset.lv));}
+  levels.forEach(l=>{
+    l.addEventListener('click',()=>selLevel(l));
+    l.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selLevel(l);}});
+  });
+  renderSem(0);
+
+  // Abierto/Cerrado ahora
+  function isOpen(r){const n=new Date(),d=n.getDay(),m=n.getHours()*60+n.getMinutes();return (r[d]||[]).some(([a,b])=>m>=a&&m<b);}
+  const interior={1:[[480,870]],2:[[480,870]],3:[[480,870]],4:[[480,870]],5:[[480,870]],6:[[480,870]],0:[]};
+  const exterior={1:[[660,840],[990,1230]],2:[[660,840],[990,1230]],3:[[660,840],[990,1230]],4:[[660,840],[990,1230]],5:[[660,840],[990,1230]],6:[[660,840],[990,1230]],0:[[570,780]]};
+  function setStatus(el,o){const l=el.querySelector('.lbl');if(o){el.classList.add('open');el.classList.remove('closed');l.textContent='Abierto ahora';}else{el.classList.add('closed');el.classList.remove('open');l.textContent='Cerrado ahora';}}
+  document.querySelectorAll('[data-hours]').forEach(el=>setStatus(el,isOpen(el.dataset.hours==='interior'?interior:exterior)));
+
+  // Sombra del header al hacer scroll
+  window.addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=window.scrollY>10?'0 4px 20px rgba(63,45,30,.08)':'none';});
+
+  // GUÍA DE MOVIMIENTO — revelado al entrar en pantalla.
+  // Elementos con .reveal aparecen con fundido+subida (600ms, escalonados).
+  // Se desactiva solo si el usuario tiene "reducir movimiento" activado.
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduceMotion){
+    document.querySelectorAll('.cards .card').forEach(c=>c.classList.add('reveal'));
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){en.target.classList.add('in');obs.unobserve(en.target);}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach((el,i)=>{
+      el.style.transitionDelay=(i%4)*70+'ms';
+      obs.observe(el);
+    });
+  }else{
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
