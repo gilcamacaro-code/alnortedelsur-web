@@ -1,0 +1,152 @@
+{
+ "nota": "Estados: pendiente | falta_dato | para_aprobar | publicado. Solo José aprueba; nada se publica sin su sí.",
+ "publicaciones": [
+  {
+   "fecha": "2026-10-11",
+   "tema": "«Diciembre sabe a casa» · carrusel de Navidad",
+   "estado": "publicado",
+   "falta": "",
+   "idea": "Encargos de hallacas y pan de jamón, ají dulce, harinas, hojas y promoción por cantidad."
+  },
+  {
+   "fecha": "2026-10-13",
+   "tema": "Llegó el ají dulce · cómo congelarlo",
+   "estado": "para_aprobar",
+   "falta": "",
+   "idea": "Carrusel de 3 ya hecho en semanas/2026-10-13-aji-dulce."
+  },
+  {
+   "fecha": "2026-10-16",
+   "tema": "¿Qué harina para qué receta?",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Arepa, hallaca, tamal y empanada: P.A.N., Maseca, La Mantuana, América precocida, Masarica Goya. Contenido para guardar."
+  },
+  {
+   "fecha": "2026-10-20",
+   "tema": "El puesto por dentro · reel corto",
+   "estado": "falta_dato",
+   "falta": "Vídeo de 15 s grabado en la tienda",
+   "idea": "Reel del puesto con ají y hojas."
+  },
+  {
+   "fecha": "2026-10-23",
+   "tema": "Dulces de Navidad: buñuelos, natilla y arequipe",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Receta corta con productos de la tienda (harina de buñuelos Colmaiz, arequipe, panela)."
+  },
+  {
+   "fecha": "2026-10-27",
+   "tema": "Último aviso: se acaba el ají dulce",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Urgencia de fin de temporada; congélalo para las hallacas."
+  },
+  {
+   "fecha": "2026-10-30",
+   "tema": "Día de Muertos: tamales y Maseca",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Guiño a la clientela mexicana (1 y 2 de noviembre): Maseca, hojas de maíz, tamales de elote."
+  },
+  {
+   "fecha": "2026-11-03",
+   "tema": "Abrimos encargos de hallacas y pan de jamón",
+   "estado": "falta_dato",
+   "falta": "Precios (hallaca unidad y docena, pan de jamón) y fecha límite",
+   "idea": "La publicación más importante de la temporada."
+  },
+  {
+   "fecha": "2026-11-06",
+   "tema": "Así son nuestras hallacas",
+   "estado": "falta_dato",
+   "falta": "Fotos reales de las hallacas de este año",
+   "idea": "Confianza para encargar."
+  },
+  {
+   "fecha": "2026-11-10",
+   "tema": "La lista de la compra de las hallacas",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Imagen para guardar con todos los ingredientes."
+  },
+  {
+   "fecha": "2026-11-13",
+   "tema": "Hojas de plátano y de maíz · promoción por cantidad",
+   "estado": "falta_dato",
+   "falta": "Cifra concreta del descuento por cantidad",
+   "idea": "Con la cifra en grande."
+  },
+  {
+   "fecha": "2026-11-17",
+   "tema": "Regalos latinos para el amigo invisible",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Kit de hallacas y pan de jamón, chocolates, dulces."
+  },
+  {
+   "fecha": "2026-11-20",
+   "tema": "Recordatorio de encargos",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Cuántos días quedan hasta la fecha límite."
+  },
+  {
+   "fecha": "2026-11-27",
+   "tema": "Black Friday latino",
+   "estado": "falta_dato",
+   "falta": "Cifra concreta del descuento por cantidad",
+   "idea": "La promoción por cantidad como oferta del viernes."
+  },
+  {
+   "fecha": "2026-12-01",
+   "tema": "Bienvenido diciembre · encargos abiertos",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Recordatorio con el WhatsApp."
+  },
+  {
+   "fecha": "2026-12-04",
+   "tema": "Noche de velitas (7 dic): buñuelos y natilla",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Tradición colombiana."
+  },
+  {
+   "fecha": "2026-12-08",
+   "tema": "El pan de jamón, protagonista",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Para la cena y para regalar."
+  },
+  {
+   "fecha": "2026-12-11",
+   "tema": "Último aviso de encargos",
+   "estado": "falta_dato",
+   "falta": "Fecha límite de encargos",
+   "idea": "Cuenta atrás."
+  },
+  {
+   "fecha": "2026-12-18",
+   "tema": "Horario de Navidad y Fin de Año",
+   "estado": "falta_dato",
+   "falta": "Horario de fiestas de los dos puestos",
+   "idea": "Días y horas."
+  },
+  {
+   "fecha": "2026-12-24",
+   "tema": "¡Feliz Navidad!",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Agradecimiento a la clientela."
+  },
+  {
+   "fecha": "2026-12-31",
+   "tema": "El 31 también se comen hallacas · Feliz 2027",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Última venta del año y felicitación."
+  }
+ ]
+}

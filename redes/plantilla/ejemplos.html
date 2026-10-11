@@ -1,0 +1,267 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222;font-family:Inter,sans-serif}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;color:#fff;background:#1E4229}
+.photo{position:absolute;inset:0;background-size:cover;background-position:center}
+.shade{position:absolute;inset:0}
+.serif{font-family:Lora,serif}
+.kick{font-size:28px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#F2B705}
+.brand{position:absolute;top:56px;left:64px;display:flex;align-items:center;gap:18px;font-weight:700;font-size:26px;letter-spacing:.08em;z-index:3}
+.prod .brand,.cover .brand{background:rgba(14,32,20,.72);padding:8px 24px 8px 8px;border-radius:999px;top:48px;left:56px}
+.brand img{width:76px;height:76px;border-radius:50%;clip-path:circle(47%);background:#fff}
+.num{position:absolute;top:70px;right:64px;font-size:24px;font-weight:600;color:rgba(255,255,255,.75);z-index:3}
+.stripe{position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(90deg,#1E4229 0 33%,#F2B705 33% 66%,#C1352B 66%);z-index:4}
+.star{position:absolute;color:#F2B705;opacity:.55;z-index:2}
+/* cover */
+.cover .shade{background:linear-gradient(180deg,rgba(14,32,20,.55) 0%,rgba(14,32,20,.05) 30%,rgba(14,32,20,.35) 55%,rgba(14,32,20,.96) 82%)}
+.cover .txt{position:absolute;left:64px;right:64px;bottom:110px;z-index:3}
+.cover h1{font-size:132px;line-height:.98;font-weight:700;margin-top:22px}
+.cover h1 em{color:#F2B705;font-style:italic}
+.cover p{font-size:36px;line-height:1.35;margin-top:30px;color:#E7EFE2;max-width:860px}
+.swipe{display:inline-flex;align-items:center;gap:14px;margin-top:40px;font-size:28px;font-weight:700;background:#F2B705;color:#1E4229;padding:16px 30px;border-radius:999px}
+/* product slides */
+.prod .photo{height:830px;bottom:auto}
+.prod .shade{height:830px;bottom:auto;background:linear-gradient(180deg,rgba(14,32,20,.85) 0%,rgba(14,32,20,.35) 14%,rgba(14,32,20,0) 30%,rgba(14,32,20,0) 68%,#1E4229 100%)}
+.prod .body{position:absolute;left:64px;right:64px;top:760px;z-index:3}
+.prod h2{font-size:84px;line-height:1.02;font-weight:700;margin-top:14px}
+.prod ul{list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px 36px}
+.prod li{font-size:34px;line-height:1.25;padding-left:34px;position:relative;color:#EEF4EA}
+.prod li:before{content:"✦";position:absolute;left:0;top:1px;color:#F2B705;font-size:24px}
+.prod li b{color:#fff}
+.note{margin-top:28px;font-size:26px;color:#BFD3B9;font-style:italic}
+/* text-only slide */
+.list{background:radial-gradient(circle at 85% 12%,#2d5b3a 0,#1E4229 45%,#163320 100%)}
+.list .body{position:absolute;left:64px;right:64px;top:250px;z-index:3}
+.list h2{font-size:104px;line-height:1;font-weight:700;margin-top:18px}
+.list h2 em{color:#F2B705;font-style:italic}
+.list .lead{font-size:34px;line-height:1.4;color:#DCE8D6;margin-top:26px;max-width:880px}
+.items{margin-top:46px;display:flex;flex-direction:column;gap:0}
+.it{display:flex;align-items:baseline;gap:24px;border-top:1.5px solid rgba(242,183,5,.35);padding:30px 0}
+.it:last-child{border-bottom:1.5px solid rgba(242,183,5,.35)}
+.it span{font-family:Lora,serif;font-size:30px;color:#F2B705;width:48px;flex:none}
+.it b{font-size:42px;font-weight:700;flex:none}
+.it i{font-style:normal;font-size:30px;color:#BFD3B9;margin-left:auto;text-align:right}
+.round{position:absolute;right:-90px;top:-90px;width:420px;height:420px;border-radius:50%;background-size:cover;background-position:center;border:10px solid #F2B705;z-index:2}
+/* cta */
+.cta{background:#F6F1E4;color:#3F2D1E}
+.cta .body{position:absolute;left:72px;right:72px;top:150px}
+.cta .kick{color:#C1352B}
+.cta h2{font-size:110px;line-height:1;color:#1E4229;font-weight:700;margin-top:18px}
+.cta .lead{font-size:34px;line-height:1.4;margin-top:24px;color:#5F5340}
+.cards{margin-top:48px;display:flex;flex-direction:column;gap:22px}
+.card{background:#fff;border-radius:26px;padding:34px 36px;display:flex;gap:26px;align-items:center;box-shadow:0 6px 18px rgba(63,45,30,.08)}
+.card .ic{width:74px;height:74px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;flex:none}
+.card b{display:block;font-size:34px;color:#1E4229}
+.card small{display:block;font-size:27px;color:#5F5340;margin-top:4px;line-height:1.35}
+.cta .brand{color:#1E4229}
+.cta .num{color:#8a7d68}
+
+.leaf{background:radial-gradient(circle at 15% 90%,#2d5b3a 0,#1E4229 50%,#163320 100%)}
+.leaf .body{position:absolute;left:64px;right:64px;top:300px;z-index:3}
+.leaf h2{font-size:104px;line-height:1;font-weight:700;margin-top:18px}
+.leaf h2 em{color:#F2B705;font-style:italic}
+.lcards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:46px}
+.lc{background:rgba(255,255,255,.07);border:1.5px solid rgba(242,183,5,.4);border-radius:28px;padding:44px 34px}
+.lc svg{width:84px;height:84px}
+.lc b{display:block;font-family:Lora,serif;font-size:48px;line-height:1.05;margin-top:18px}
+.lc small{display:block;font-size:30px;line-height:1.4;color:#CFE0C9;margin-top:12px}
+.promo{margin-top:46px;background:#F2B705;color:#1E4229;border-radius:28px;padding:44px 40px;position:relative}
+.promo .tag{display:inline-block;background:#C1352B;color:#fff;font-size:22px;font-weight:800;letter-spacing:.16em;padding:8px 16px;border-radius:999px}
+.promo b{display:block;font-family:Lora,serif;font-size:62px;line-height:1.02;margin-top:14px}
+.promo small{display:block;font-size:31px;line-height:1.4;margin-top:12px;font-weight:500}
+.bigleaf{position:absolute;right:-140px;top:-120px;width:620px;opacity:.13;z-index:1;transform:rotate(-28deg)}
+
+.enc .shade{background:linear-gradient(180deg,rgba(14,32,20,.80) 0%,rgba(14,32,20,.55) 40%,rgba(14,32,20,.92) 70%,#1E4229 100%)}
+.enc .body{position:absolute;left:64px;right:64px;top:210px;z-index:3}
+.enc h2{font-size:112px;line-height:.98;font-weight:700;margin-top:18px}
+.enc h2 em{color:#F2B705;font-style:italic}
+.enc .lead{font-size:34px;line-height:1.4;color:#E4EEDD;margin-top:24px;max-width:860px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:190px}
+.ec{background:#F6F1E4;color:#1E4229;border-radius:28px;padding:34px 32px}
+.ec .e{font-size:54px}
+.ec b{display:block;font-family:Lora,serif;font-size:50px;line-height:1.02;margin-top:10px}
+.ec small{display:block;font-size:28px;line-height:1.35;color:#5F5340;margin-top:10px}
+.ebtn{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:16px;background:#25D366;color:#073b1e;font-weight:800;font-size:36px;border-radius:999px;padding:24px}
+.leafimg{position:absolute;right:-70px;top:-70px;width:380px;height:380px;border-radius:50%;background-size:230%;background-position:62% 2%;border:10px solid #F2B705;z-index:2}
+
+.steps{margin-top:40px;display:flex;flex-direction:column}
+.st{display:flex;gap:28px;align-items:flex-start;border-top:1.5px solid rgba(242,183,5,.35);padding:28px 0}
+.st:last-child{border-bottom:1.5px solid rgba(242,183,5,.35)}
+.st span{font-family:Lora,serif;font-size:56px;line-height:1;color:#F2B705;width:70px;flex:none}
+.st b{display:block;font-size:40px}
+.st small{display:block;font-size:29px;line-height:1.4;color:#CFE0C9;margin-top:6px}
+</style></head><body>
+<!-- PLANTILLA DE ALNORTEDELSUR PARA REDES. Cada <section class="s ..."> es una imagen de 1080x1350.
+ Tipos: cover (foto + titular), list (lista numerada), prod (foto arriba + lista), leaf (texto + promo), enc (encargos), cta (cierre con datos).
+ Rutas de imagen relativas a esta carpeta: ../fotos/<archivo>.jpg y logo.png -->
+<section class="s cover" id="s1">
+  <div class="photo" style="background-image:url(../fotos/hallacas.jpg);background-position:40% 50%"></div>
+  <div class="shade"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="star" style="top:190px;right:120px;font-size:54px">✦</div>
+  <div class="star" style="top:290px;right:220px;font-size:28px">✦</div>
+  <div class="txt">
+    <div class="kick">Navidad latina · Mercado de Ruzafa</div>
+    <h1 class="serif">Diciembre<br>sabe a <em>casa</em></h1>
+    <p>Hallacas y pan de jamón por encargo, y todo para hacerlas en casa. Este año, la mesa de tu tierra se arma aquí.</p>
+    <div class="swipe">Desliza y prepara tu lista →</div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s enc" id="s2">
+  <div class="photo" style="background-image:url(../fotos/hallacas.jpg);background-position:70% 40%;background-size:210%"></div>
+  <div class="shade"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Por encargo · Hechas para ti</div>
+    <h2 class="serif">¿No te da tiempo?<br><em>Te las hacemos</em></h2>
+    <p class="lead">Llega a la cena de Nochebuena sin pasar el día en la cocina.</p>
+    <div class="ecards">
+      <div class="ec"><div class="e">🌿</div><b>Hallacas</b><small>Con la sazón de siempre, bien rellenas</small></div>
+      <div class="ec"><div class="e">🍞</div><b>Pan de jamón</b><small>El compañero perfecto de la mesa navideña</small></div>
+    </div>
+    <div class="ebtn">💬 Encarga por WhatsApp · 671 339 005</div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s list" id="s3">
+  <div class="round" style="background-image:url(../fotos/hallacas.jpg)"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">La reina de la mesa</div>
+    <h2 class="serif">Todo para tus<br><em>hallacas</em></h2>
+    <p class="lead">Lo que pide la receta de la abuela, en un solo sitio y sin dar vueltas por Valencia.</p>
+    <div class="items">
+      <div class="it"><span>01</span><b>Ají dulce</b><i>el alma del guiso</i></div>
+      <div class="it"><span>02</span><b>Harinas de maíz</b><i>varias marcas</i></div>
+      <div class="it"><span>03</span><b>Hojas de plátano</b><i>para envolver</i></div>
+      <div class="it"><span>04</span><b>Onoto (achiote)</b><i>grano, pasta y aceite</i></div>
+      <div class="it"><span>05</span><b>Aceitunas, alcaparras y pasas</b><i></i></div>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s prod" id="s4">
+  <div class="photo" style="background-image:url(../fotos/aji1.jpg);background-position:50% 50%"></div>
+  <div class="shade"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Temporada de ají dulce</div>
+    <h2 class="serif">Ají dulce y la harina de tu casa</h2>
+    <ul>
+      <li><b>Ají dulce</b> fresco</li>
+      <li><b>P.A.N.</b> blanca y amarilla</li>
+      <li><b>Maseca</b></li>
+      <li><b>La Mantuana</b></li>
+      <li><b>América</b> precocida</li>
+      <li><b>Masarica</b> Goya</li>
+    </ul>
+    <p class="note">El ají dulce es de temporada: llévatelo ahora y congélalo para tus hallacas.</p>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s leaf" id="s5">
+  <svg class="bigleaf" viewBox="0 0 100 100"><path d="M50 2C20 24 10 58 50 98C90 58 80 24 50 2Z" fill="#F2B705"/><path d="M50 8V94M50 26L30 14M50 26L70 14M50 42L24 28M50 42L76 28M50 58L26 46M50 58L74 46M50 74L32 64M50 74L68 64" stroke="#1E4229" stroke-width="2" fill="none"/></svg>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Para envolver con tradición</div>
+    <h2 class="serif">Variedad de <em>hojas</em></h2>
+    <div class="lcards">
+      <div class="lc"><svg viewBox="0 0 100 100"><path d="M50 6C24 26 16 56 50 94C84 56 76 26 50 6Z" fill="#F2B705" opacity=".9"/><path d="M50 12V90M50 32L36 24M50 32L64 24M50 48L32 38M50 48L68 38M50 64L34 56M50 64L66 56" stroke="#1E4229" stroke-width="2.5" fill="none"/></svg><b>Hojas de plátano</b><small>Hallacas, tamales, pasteles y bollos</small></div>
+      <div class="lc"><svg viewBox="0 0 100 100"><path d="M50 6C24 26 16 56 50 94C84 56 76 26 50 6Z" fill="#F2B705" opacity=".9"/><path d="M50 12V90M50 32L36 24M50 32L64 24M50 48L32 38M50 48L68 38M50 64L34 56M50 64L66 56" stroke="#1E4229" stroke-width="2.5" fill="none"/></svg><b>Hojas de maíz</b><small>Tamales mexicanos, humitas y envueltos</small></div>
+    </div>
+    <div class="promo">
+      <span class="tag">PROMOCIÓN POR CANTIDAD</span>
+      <b>Cuanto más llevas, mejor precio</b>
+      <small>Precio especial por cantidad en hojas, harinas y ají dulce. Ideal si haces hallacas para toda la familia o por encargo.</small>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s prod" id="s6">
+  <div class="photo" style="background-image:url(../fotos/chocolates.jpg);background-position:50% 30%"></div>
+  <div class="shade"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Para la sobremesa</div>
+    <h2 class="serif">Dulces de Nochebuena</h2>
+    <ul>
+      <li><b>Buñuelos</b> · harina lista</li>
+      <li><b>Arequipe</b> y manjar blanco</li>
+      <li><b>Chocolate de taza</b></li>
+      <li><b>Polvorones</b> y alfajores</li>
+      <li><b>Chocolates</b> Savoy</li>
+      <li><b>Pasta de guayaba</b></li>
+    </ul>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s cta" id="s7">
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Te esperamos</div>
+    <h2 class="serif">Arma tu Navidad con nosotros</h2>
+    <p class="lead">Ven antes de las prisas de diciembre y llévate todo en una sola visita.</p>
+    <div class="cards">
+      <div class="card"><div class="ic" style="background:#E7F0E3">📍</div><div><b>Mercado de Ruzafa</b><small>Puestos 213-220 · lunes a sábado 8:00-14:30<br>Puestos 107-108 · lunes a viernes 17:00-20:00</small></div></div>
+      <div class="card"><div class="ic" style="background:#E3F6EA">💬</div><div><b>Encargos por WhatsApp</b><small>671 339 005 · hallacas, pan de jamón y lo que necesites</small></div></div>
+      <div class="card"><div class="ic" style="background:#FDF1CC">🎁</div><div><b>Precio especial por cantidad</b><small>Pregunta en el puesto o por WhatsApp</small></div></div>
+      <div class="card"><div class="ic" style="background:#E6EEFB">👍</div><div><b>Síguenos para las ofertas</b><small>Facebook: Alnortedelsurvlc · Web: alnortedelsurvlc.com</small></div></div>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s cover" id="s1">
+  <div class="photo" style="background-image:url(../fotos/aji1.jpg)"></div>
+  <div class="shade" style="background:linear-gradient(180deg,rgba(14,32,20,.5) 0%,rgba(14,32,20,.1) 25%,rgba(14,32,20,.55) 45%,rgba(14,32,20,.97) 75%)"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="txt">
+    <div class="kick">Temporada de ají dulce</div>
+    <h1 class="serif">Llegó el<br><em>ají dulce</em></h1>
+    <p>Fresco, aromático y por poco tiempo. Es el alma del guiso de tus hallacas: llévatelo ahora y congélalo para diciembre.</p>
+    <div class="swipe">Desliza: cómo congelarlo →</div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s list" id="s2">
+  <div class="round" style="background-image:url(../fotos/aji3.jpg)"></div>
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body" style="top:290px">
+    <div class="kick">Truco de la casa</div>
+    <h2 class="serif">Congélalo para<br>tus <em>hallacas</em></h2>
+    <div class="steps">
+      <div class="st"><span>1</span><div><b>Lávalo y sécalo bien</b><small>Sin agua por fuera, para que no se queme en el congelador.</small></div></div>
+      <div class="st"><span>2</span><div><b>Quita el tallo y las semillas</b><small>Déjalo entero o en trozos, como lo uses en tu guiso.</small></div></div>
+      <div class="st"><span>3</span><div><b>Repártelo en bolsas</b><small>Una bolsa por cada tanda de hallacas, bien cerrada y sin aire.</small></div></div>
+      <div class="st"><span>4</span><div><b>Al congelador, y listo</b><small>En diciembre lo usas directo, sin descongelar.</small></div></div>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s leaf" id="s3">
+  <div class="brand"><img src="logo.png">AL NORTE DEL SUR</div>
+  <div class="body" style="top:300px">
+    <div class="kick">No te quedes sin él</div>
+    <h2 class="serif">Ven por tu<br><em>ají dulce</em></h2>
+    <div class="promo" style="margin-top:56px">
+      <span class="tag">PROMOCIÓN POR CANTIDAD</span>
+      <b>Cuanto más llevas, mejor precio</b>
+      <small>Ideal para congelar el de todas tus hallacas de una vez.</small>
+    </div>
+    <div class="lcards" style="grid-template-columns:1fr;margin-top:30px">
+      <div class="lc" style="padding:34px"><b style="margin-top:0">📍 Mercado de Ruzafa</b><small>Puestos 213-220 · lunes a sábado 8:00-14:30<br>Puestos 107-108 · lunes a viernes 17:00-20:00</small></div>
+    </div>
+    <div class="ebtn" style="margin-top:30px">💬 Te lo apartamos: 671 339 005</div>
+  </div>
+  <div class="stripe"></div>
+</section>
+</body></html>
