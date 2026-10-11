@@ -438,6 +438,8 @@ footer ul a:hover{color:var(--choclo)}
 .hp-precio s{font-size:var(--fs-sm);color:var(--tierra-soft)}
 .hp-ctas{display:flex;flex-direction:column;gap:8px;padding:12px 16px 16px}
 .hp-ctas .btn{width:100%;justify-content:center;padding:12px 16px;font-size:.92rem}
+.hp-etq{font-size:1.25rem!important;color:var(--verde-dark)!important}
+.of-fotos img.foto{max-height:none;max-width:100%;width:100%;height:100%;object-fit:cover;border-radius:8px}
 .of-wa{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:700;font-size:var(--fs-sm);color:var(--verde-dark)}
 .of-pre{display:inline-block;background:var(--tierra-900);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 12px;border-radius:var(--r-full);margin-top:8px}
 @media(max-width:880px){
@@ -1009,7 +1011,10 @@ footer ul a:hover{color:var(--choclo)}
     const corta=f=>dt(f).toLocaleDateString('es-ES',{day:'numeric',month:'short'});
     const dias=(a,b)=>Math.round((dt(b)-dt(a))/864e5);
     const wa=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
-    fetch('ofertas.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
+    fetch('ofertas.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(raw=>{
+      // ofertas.json puede traer una campaña o varias en "campanas": se usa la primera activa y en vigencia.
+      const lista=raw&&Array.isArray(raw.campanas)?raw.campanas:[raw];
+      const d=lista.find(c=>c&&c.activa!==false&&c.vigencia&&(c.ofertas||[]).length&&hoy<=c.vigencia.hasta&&(hoy>=c.vigencia.desde||dias(hoy,c.vigencia.desde)<=PREAVISO_DIAS));
       if(!d||!d.vigencia||!(d.ofertas||[]).length||hoy>d.vigencia.hasta) return;
       const activa=hoy>=d.vigencia.desde;
       if(!activa&&dias(hoy,d.vigencia.desde)>PREAVISO_DIAS) return;
@@ -1017,34 +1022,35 @@ footer ul a:hover{color:var(--choclo)}
       const rango='del '+corta(d.vigencia.desde)+' al '+corta(d.vigencia.hasta);
       const quedan=dias(hoy,d.vigencia.hasta);
       const cuando=activa?(quedan===0?'¡Último día!':'Hasta el '+fecha(d.vigencia.hasta)):'Próximamente · '+rango;
-      const apartar=o=>wa('¡Hola AL NORTE DEL SUR! Quiero apartar: '+o.titulo+' ('+eur(o.precio)+') de la oferta «'+d.campana+'».');
+      const precioTxt=o=>o.precio!=null?eur(o.precio):(o.etiqueta||'');
+      const apartar=o=>wa(o.precio!=null?'¡Hola AL NORTE DEL SUR! Quiero apartar: '+o.titulo+' ('+eur(o.precio)+') de la oferta «'+d.campana+'».':'¡Hola AL NORTE DEL SUR! Me interesa: '+o.titulo+' («'+d.campana+'»).');
 
       // 1) Barra de arriba del todo
       const bar=document.getElementById('promoBar');
       bar.className='promo-bar'+(activa?'':' pre');
-      document.getElementById('pbTxt').textContent=(activa?'🎁 '+d.campana+': ':'📅 '+d.campana+' ('+rango+'): ')+g.titulo+' a '+eur(g.precio)+(activa?(quedan===0?' · ¡último día!':' · hasta el '+corta(d.vigencia.hasta)):'');
+      document.getElementById('pbTxt').textContent=(activa?'🎁 '+d.campana+': ':'📅 '+d.campana+' ('+rango+'): ')+g.titulo+(g.precio!=null?' a '+eur(g.precio):'')+(activa?(quedan===0?' · ¡último día!':' · hasta el '+corta(d.vigencia.hasta)):'');
       const cta=document.getElementById('pbCta');
-      if(activa){cta.textContent='Ver las '+d.ofertas.length+' ofertas';cta.href='#oferta';cta.removeAttribute('target');}
+      if(activa){cta.textContent=d.boton||('Ver las '+d.ofertas.length+' ofertas');cta.href='#oferta';cta.removeAttribute('target');}
       else{cta.textContent='Apártalo ya por WhatsApp';cta.href=apartar(g);}
 
       // 2) Tarjeta en el hero (se ve sin bajar)
       const hp=document.getElementById('heroPromo');
       hp.innerHTML=`<div class="hp-head"><span>${esc(activa?d.campana:'Próximamente')}</span><span>${esc(activa?(quedan===0?'Último día':'Hasta '+corta(d.vigencia.hasta)):rango)}</span></div>`+
-        `<div class="hp-main">${g.fotos&&g.fotos[0]?`<img src="${esc(g.fotos[0])}" alt="${esc(g.titulo)}">`:''}<div><h3>${esc(g.titulo)}</h3><p>${esc(g.texto||'')}</p></div></div>`+
-        `<div class="hp-precio"><strong>${eur(g.precio)}</strong><s>antes ${eur(g.precio_antes)}</s></div>`+
-        `<div class="hp-ctas"><a class="btn btn-primary" href="#oferta">Ver ${d.ofertas.length} ofertas</a><a class="btn btn-green" href="${esc(apartar(g))}" target="_blank" rel="noopener">Apártalo por WhatsApp</a></div>`;
+        `<div class="hp-main">${g.fotos&&g.fotos[0]?`<img${g.foto_completa?' style="object-fit:cover;border-radius:10px"':''} src="${esc(g.fotos[0])}" alt="${esc(g.titulo)}">`:''}<div><h3>${esc(g.titulo)}</h3><p>${esc(g.texto||'')}</p></div></div>`+
+        (g.precio!=null?`<div class="hp-precio"><strong>${eur(g.precio)}</strong><s>antes ${eur(g.precio_antes)}</s></div>`:`<div class="hp-precio"><strong class="hp-etq">${esc(g.etiqueta||'')}</strong></div>`)+
+        `<div class="hp-ctas"><a class="btn btn-primary" href="#oferta">${esc(d.boton||('Ver '+d.ofertas.length+' ofertas'))}</a><a class="btn btn-green" href="${esc(apartar(g))}" target="_blank" rel="noopener">${esc(g.boton||'Apártalo por WhatsApp')}</a></div>`;
       hp.classList.add('on');
 
       // 3) Sección completa de ofertas (justo debajo del hero)
       document.getElementById('ofertaTit').textContent=d.campana;
-      document.getElementById('ofertaSub').textContent=activa?'Solo en nuestros puestos del Mercado de Ruzafa, mientras haya existencias. Si quieres asegurarte, apártalo por WhatsApp.':'Empieza el '+fecha(d.vigencia.desde)+'. Apártalo ya por WhatsApp y recógelo esos días en el Mercado de Ruzafa.';
-      document.getElementById('ofertaVig').textContent='Válido del '+fecha(d.vigencia.desde)+' al '+fecha(d.vigencia.hasta)+', mientras haya existencias.';
+      document.getElementById('ofertaSub').textContent=d.subtitulo?d.subtitulo:activa?'Solo en nuestros puestos del Mercado de Ruzafa, mientras haya existencias. Si quieres asegurarte, apártalo por WhatsApp.':'Empieza el '+fecha(d.vigencia.desde)+'. Apártalo ya por WhatsApp y recógelo esos días en el Mercado de Ruzafa.';
+      document.getElementById('ofertaVig').textContent=d.nota_vigencia||('Válido del '+fecha(d.vigencia.desde)+' al '+fecha(d.vigencia.hasta)+', mientras haya existencias.');
       document.getElementById('ofertaGrid').innerHTML=d.ofertas.map(o=>{
-        const fotos=(o.fotos||[]).map(f=>`<img src="${esc(f)}" alt="" loading="lazy">`).join('');
-        const tag=o.tipo==='pack'?'Pack':(o.por_unidades>1?o.por_unidades+' por '+eur(o.precio):'-'+o.ahorro_pct+' %');
-        return `<article class="of-card ${esc(o.tipo)}"><span class="of-tag">${esc(tag)}</span><div class="of-fotos">${fotos}</div><div class="of-body"><h3>${esc(o.titulo)}</h3><p>${esc(o.texto||'')}</p><div class="of-precio"><strong>${eur(o.precio)}</strong><s>antes ${eur(o.precio_antes)}</s></div>${activa?'':`<span class="of-pre">Desde el ${esc(corta(d.vigencia.desde))}</span>`}<a class="of-wa" href="${esc(apartar(o))}" target="_blank" rel="noopener">💬 Apártalo por WhatsApp</a></div></article>`;
+        const fotos=(o.fotos||[]).map(f=>`<img${o.foto_completa?' class="foto"':''} src="${esc(f)}" alt="" loading="lazy">`).join('');
+        const tag=o.etiqueta?o.etiqueta:o.tipo==='pack'?'Pack':(o.por_unidades>1?o.por_unidades+' por '+eur(o.precio):'-'+o.ahorro_pct+' %');
+        return `<article class="of-card ${esc(o.tipo)}"><span class="of-tag">${esc(tag)}</span><div class="of-fotos">${fotos}</div><div class="of-body"><h3>${esc(o.titulo)}</h3><p>${esc(o.texto||'')}</p>${o.precio!=null?`<div class="of-precio"><strong>${eur(o.precio)}</strong><s>antes ${eur(o.precio_antes)}</s></div>`:''}${activa?'':`<span class="of-pre">Desde el ${esc(corta(d.vigencia.desde))}</span>`}<a class="of-wa" href="${esc(apartar(o))}" target="_blank" rel="noopener">💬 ${esc(o.boton||'Apártalo por WhatsApp')}</a></div></article>`;
       }).join('');
-      document.querySelector('#oferta .eyebrow').textContent=activa?'Oferta de la semana':'Próximamente';
+      document.querySelector('#oferta .eyebrow').textContent=d.antetitulo?d.antetitulo:activa?'Oferta de la semana':'Próximamente';
       document.getElementById('oferta').classList.add('on');
       document.getElementById('navOferta').hidden=false;
     }).catch(()=>{});

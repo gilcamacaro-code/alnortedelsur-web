@@ -1,76 +1,145 @@
 {
- "campana": "Día de la Madre argentino",
- "vigencia": {
-  "desde": "2026-10-15",
-  "hasta": "2026-10-18"
- },
- "ofertas": [
+ "nota": "La web muestra la PRIMERA campaña con activa distinta de false que esté en vigencia (o a 5 días o menos de empezar). Al caducar, pasa sola a la siguiente.",
+ "campanas": [
   {
-   "id": "gancho-playadito",
-   "tipo": "gancho",
-   "titulo": "Yerba Playadito 500 g",
-   "texto": "La yerba de siempre, a precio de mamá",
-   "precio": 6.5,
-   "por_unidades": 1,
-   "precio_antes": 7.8,
-   "ahorro_pct": 17,
-   "fotos": [
-    "assets/img/ofertas/y-m-playadito-500-g.jpg"
-   ]
+   "campana": "Día de la Madre argentino",
+   "vigencia": {
+    "desde": "2026-10-15",
+    "hasta": "2026-10-18"
+   },
+   "ofertas": [
+    {
+     "id": "gancho-playadito",
+     "tipo": "gancho",
+     "titulo": "Yerba Playadito 500 g",
+     "texto": "La yerba de siempre, a precio de mamá",
+     "precio": 6.5,
+     "por_unidades": 1,
+     "precio_antes": 7.8,
+     "ahorro_pct": 17,
+     "fotos": [
+      "assets/img/ofertas/y-m-playadito-500-g.jpg"
+     ]
+    },
+    {
+     "id": "pack-mate",
+     "tipo": "pack",
+     "titulo": "Pack «Mate para mamá»",
+     "texto": "Mate de cristal forrado en cuero + bombilla inox con filtro + Playadito 500 g",
+     "precio": 26.9,
+     "por_unidades": 1,
+     "precio_antes": 31.7,
+     "ahorro_pct": 15,
+     "fotos": [
+      "assets/img/ofertas/bombilla-inox-con-filtro.jpg",
+      "assets/img/ofertas/y-m-playadito-500-g.jpg"
+     ]
+    },
+    {
+     "id": "pack-dulce",
+     "tipo": "pack",
+     "titulo": "Pack «Dulce de mamá»",
+     "texto": "6 alfajores Havanna + dulce de leche Havanna 250 g",
+     "precio": 15.9,
+     "por_unidades": 1,
+     "precio_antes": 18.0,
+     "ahorro_pct": 12,
+     "fotos": [
+      "assets/img/ofertas/alfaj-havanna-mixto-12u-612-g.jpg",
+      "assets/img/ofertas/ddl-havanna-frasco-250-g.jpg"
+     ]
+    },
+    {
+     "id": "termo",
+     "tipo": "normal",
+     "titulo": "Termo Lumilagro clásico 1 L",
+     "texto": "El termo de toda la vida",
+     "precio": 15.5,
+     "por_unidades": 1,
+     "precio_antes": 17.9,
+     "ahorro_pct": 13,
+     "fotos": [
+      "assets/img/ofertas/termo-lumilagro-clasico-1-l.jpg"
+     ]
+    },
+    {
+     "id": "cbse-2x",
+     "tipo": "normal",
+     "titulo": "Yerba CBSé 500 g · 2 por 9,50 €",
+     "texto": "Naranja, limón, pomelo, hierbas serranas o guaraná: elige los sabores",
+     "precio": 9.5,
+     "por_unidades": 2,
+     "precio_antes": 10.8,
+     "ahorro_pct": 12,
+     "fotos": [
+      "assets/img/ofertas/y-m-cbse-c-naranja-500-g.jpg",
+      "assets/img/ofertas/y-m-cbse-c-hierbas-serr-500-g.jpg"
+     ]
+    }
+   ],
+   "activa": false,
+   "nota_interna": "Se activa (activa=true) cuando José confirme que llegó la mercancía. Prevista para el 14/10/2026."
   },
   {
-   "id": "pack-mate",
-   "tipo": "pack",
-   "titulo": "Pack «Mate para mamá»",
-   "texto": "Mate de cristal forrado en cuero + bombilla inox con filtro + Playadito 500 g",
-   "precio": 26.9,
-   "por_unidades": 1,
-   "precio_antes": 31.7,
-   "ahorro_pct": 15,
-   "fotos": [
-    "assets/img/ofertas/bombilla-inox-con-filtro.jpg",
-    "assets/img/ofertas/y-m-playadito-500-g.jpg"
-   ]
-  },
-  {
-   "id": "pack-dulce",
-   "tipo": "pack",
-   "titulo": "Pack «Dulce de mamá»",
-   "texto": "6 alfajores Havanna + dulce de leche Havanna 250 g",
-   "precio": 15.9,
-   "por_unidades": 1,
-   "precio_antes": 18.0,
-   "ahorro_pct": 12,
-   "fotos": [
-    "assets/img/ofertas/alfaj-havanna-mixto-12u-612-g.jpg",
-    "assets/img/ofertas/ddl-havanna-frasco-250-g.jpg"
-   ]
-  },
-  {
-   "id": "termo",
-   "tipo": "normal",
-   "titulo": "Termo Lumilagro clásico 1 L",
-   "texto": "El termo de toda la vida",
-   "precio": 15.5,
-   "por_unidades": 1,
-   "precio_antes": 17.9,
-   "ahorro_pct": 13,
-   "fotos": [
-    "assets/img/ofertas/termo-lumilagro-clasico-1-l.jpg"
-   ]
-  },
-  {
-   "id": "cbse-2x",
-   "tipo": "normal",
-   "titulo": "Yerba CBSé 500 g · 2 por 9,50 €",
-   "texto": "Naranja, limón, pomelo, hierbas serranas o guaraná: elige los sabores",
-   "precio": 9.5,
-   "por_unidades": 2,
-   "precio_antes": 10.8,
-   "ahorro_pct": 12,
-   "fotos": [
-    "assets/img/ofertas/y-m-cbse-c-naranja-500-g.jpg",
-    "assets/img/ofertas/y-m-cbse-c-hierbas-serr-500-g.jpg"
+   "campana": "Navidad latina · Diciembre sabe a casa",
+   "antetitulo": "Navidad 2026",
+   "subtitulo": "Hallacas y pan de jamón por encargo, y todo para hacerlas en casa. Cuanto más llevas, mejor precio. Escríbenos por WhatsApp y te lo apartamos para recogerlo en el Mercado de Ruzafa.",
+   "nota_vigencia": "Encargos y precios por cantidad: pregúntanos por WhatsApp (671 339 005) o en los puestos 213-220 y 107-108.",
+   "boton": "Ver la campaña de Navidad",
+   "vigencia": {
+    "desde": "2026-10-11",
+    "hasta": "2026-12-31"
+   },
+   "ofertas": [
+    {
+     "id": "encargos",
+     "tipo": "gancho",
+     "titulo": "Hallacas y pan de jamón por encargo",
+     "texto": "Con la sazón de siempre. Llega a Nochebuena sin pasar el día en la cocina.",
+     "precio": null,
+     "etiqueta": "Por encargo",
+     "boton": "Encárgalas por WhatsApp",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/hallacas.jpg"
+     ]
+    },
+    {
+     "id": "aji",
+     "tipo": "normal",
+     "titulo": "Ají dulce de temporada",
+     "texto": "El alma del guiso de tus hallacas. Llévatelo ahora y congélalo para diciembre.",
+     "precio": null,
+     "etiqueta": "Temporada",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/aji1.jpg"
+     ]
+    },
+    {
+     "id": "hojas",
+     "tipo": "normal",
+     "titulo": "Variedad de hojas",
+     "texto": "Hojas de plátano y de maíz para hallacas, tamales, pasteles y humitas.",
+     "precio": null,
+     "etiqueta": "Mejor precio por cantidad",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/hojas.jpg"
+     ]
+    },
+    {
+     "id": "harinas",
+     "tipo": "normal",
+     "titulo": "Harinas de maíz de todas las marcas",
+     "texto": "P.A.N., Maseca, La Mantuana, América precocida y Masarica.",
+     "precio": null,
+     "etiqueta": "Mejor precio por cantidad",
+     "foto_completa": true,
+     "fotos": [
+      "assets/img/harinas-real.jpg"
+     ]
+    }
    ]
   }
  ]
