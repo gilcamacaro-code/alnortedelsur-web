@@ -416,6 +416,36 @@ footer ul a:hover{color:var(--choclo)}
 .of-precio s{color:var(--tierra-soft);font-size:var(--fs-sm)}
 .of-tag{position:absolute;top:10px;left:10px;background:var(--chile);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 10px;border-radius:var(--r-full)}
 .of-vig{font-size:var(--fs-sm);color:var(--tierra-soft);margin-top:var(--sp-5,20px);text-align:center}
+
+/* PROMO ARRIBA DEL TODO (11/10/2026): barra de aviso + tarjeta en el hero. Lee ofertas.json.
+   Sin campaña: mensaje fijo de "te lo apartamos". Para quitarlo todo: borrar #promoBar y #heroPromo. */
+.promo-bar{background:var(--chile);color:#fff;font-size:.92rem;font-weight:600;line-height:1.35}
+.promo-bar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;text-align:center}
+.promo-bar a.pb-cta{background:var(--choclo);color:var(--tierra-900);padding:6px 14px;border-radius:var(--r-full);font-weight:800;white-space:nowrap;text-decoration:none}
+.promo-bar a.pb-cta:hover{background:#fff}
+.promo-bar.pre{background:var(--tierra-900)}
+.promo-bar.base{background:var(--verde-dark)}
+.hero>.wrap{width:100%}
+.hero-promo{display:none;width:330px;flex-shrink:0;background:rgba(255,255,255,.97);color:var(--tierra);border-radius:var(--r-lg);box-shadow:0 18px 50px rgba(0,0,0,.35);overflow:hidden;border:3px solid var(--choclo)}
+.hero-promo.on{display:block}
+.hp-head{background:var(--chile);color:#fff;font-size:var(--fs-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;display:flex;justify-content:space-between;gap:8px}
+.hp-main{display:flex;gap:14px;align-items:center;padding:14px 16px 6px}
+.hp-main img{width:96px;height:96px;object-fit:contain;flex-shrink:0;background:#fff}
+.hp-main h3{font-family:var(--f-display);font-size:1.15rem;line-height:1.2;margin:0 0 4px;color:var(--tierra)}
+.hp-main p{font-size:var(--fs-sm);margin:0;color:var(--tierra-soft)}
+.hp-precio{display:flex;align-items:baseline;gap:10px;padding:0 16px}
+.hp-precio strong{font-size:2rem;font-weight:800;color:var(--chile)}
+.hp-precio s{font-size:var(--fs-sm);color:var(--tierra-soft)}
+.hp-ctas{display:flex;flex-direction:column;gap:8px;padding:12px 16px 16px}
+.hp-ctas .btn{width:100%;justify-content:center;padding:12px 16px;font-size:.92rem}
+.of-wa{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:700;font-size:var(--fs-sm);color:var(--verde-dark)}
+.of-pre{display:inline-block;background:var(--tierra-900);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 12px;border-radius:var(--r-full);margin-top:8px}
+@media(max-width:880px){
+  .hero-inner{flex-direction:column;align-items:stretch}
+  .hero-promo{order:-1;width:100%;max-width:460px}
+  .hero-promo .hp-ctas{flex-direction:row}
+  .promo-bar{font-size:.84rem}
+}
 </style>
 </head>
 <body>
@@ -429,6 +459,11 @@ footer ul a:hover{color:var(--choclo)}
   <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.9 7 9.9 9.9 0 0 1-9.9 9.87m8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.47-8.38"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 0C7.03 0 3 4.03 3 9c0 6.75 9 15 9 15s9-8.25 9-15c0-4.97-4.03-9-9-9m0 12.5A3.5 3.5 0 1 1 12 5.5a3.5 3.5 0 0 1 0 7"/></symbol>
 </svg>
+
+<!-- BARRA DE PROMO (arriba del todo). Texto por defecto si no hay campaña; el script la cambia con ofertas.json -->
+<div class="promo-bar base" id="promoBar" role="region" aria-label="Aviso">
+  <div class="wrap"><span id="pbTxt">🛍️ ¿Te apartamos algo? Pídelo por WhatsApp y recógelo en el Mercado de Ruzafa</span><a class="pb-cta" id="pbCta" href="https://wa.me/34671339005?text=%C2%A1Hola!%20Quer%C3%ADa%20apartar%3A%20" target="_blank" rel="noopener">Escríbenos</a></div>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -468,20 +503,12 @@ footer ul a:hover{color:var(--choclo)}
         </div>
         <p class="hero-micro">Lun–Sáb 8:00–14:30 (Puestos 213-220, interior) · Lun–Vie 17:00–20:00 (Puestos 107-108, exterior) · Domingos cerrado · <a href="https://wa.me/34671339005" target="_blank" rel="noopener">671 33 90 05</a></p>
       </div>
+      <!-- OFERTA DESTACADA EN EL HERO (se rellena con ofertas.json) -->
+      <aside class="hero-promo" id="heroPromo" aria-label="Oferta destacada"></aside>
     </div>
   </div>
   <a href="#raices" class="scroll-ind" aria-label="Bajar al contenido">▾</a>
 </section>
-
-<!-- FRANJA CONFIANZA -->
-<div class="trust">
-  <div class="wrap trust-grid">
-    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🌿</span><div>Frescura Garantizada<small>Repuesto cada semana</small></div></div>
-    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🏷️</span><div>Origen Certificado<small>Trazabilidad latinoamericana</small></div></div>
-    <div class="trust-item reveal"><span class="ico" aria-hidden="true">⭐</span><div>Calidad Premium<small>Marcas de confianza</small></div></div>
-  </div>
-</div>
-
 
 <!-- OFERTA DE LA SEMANA (se muestra sola durante la vigencia de ofertas.json) -->
 <section class="oferta" id="oferta" aria-labelledby="ofertaTit">
@@ -495,6 +522,17 @@ footer ul a:hover{color:var(--choclo)}
     <p class="of-vig" id="ofertaVig"></p>
   </div>
 </section>
+
+<!-- FRANJA CONFIANZA -->
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🌿</span><div>Frescura Garantizada<small>Repuesto cada semana</small></div></div>
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">🏷️</span><div>Origen Certificado<small>Trazabilidad latinoamericana</small></div></div>
+    <div class="trust-item reveal"><span class="ico" aria-hidden="true">⭐</span><div>Calidad Premium<small>Marcas de confianza</small></div></div>
+  </div>
+</div>
+
+
 
 <!-- BANDA IDENTIDAD LATINA -->
 <section class="raices" id="raices">
@@ -958,22 +996,55 @@ footer ul a:hover{color:var(--choclo)}
     document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
   }
 
-  // OFERTA DE LA SEMANA (loop 6.5): solo entre vigencia.desde y vigencia.hasta, hora de Madrid.
+  // OFERTA DE LA SEMANA (loop 6.5): ofertas entre vigencia.desde y vigencia.hasta, hora de Madrid.
+  // Además (11/10/2026): barra arriba del todo + tarjeta en el hero. PREAVISO_DIAS antes de la campaña
+  // se anuncia como «Próximamente» para que la gente aparte por WhatsApp. Poner 0 para no avisar antes.
   (function(){
+    const PREAVISO_DIAS=5, WA='34671339005';
     const hoy=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
     const eur=n=>n.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
     const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-    const fecha=f=>{const [y,m,d]=f.split('-');return new Date(+y,+m-1,+d).toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});};
+    const dt=f=>{const [y,m,d]=f.split('-');return new Date(+y,+m-1,+d);};
+    const fecha=f=>dt(f).toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+    const corta=f=>dt(f).toLocaleDateString('es-ES',{day:'numeric',month:'short'});
+    const dias=(a,b)=>Math.round((dt(b)-dt(a))/864e5);
+    const wa=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
     fetch('ofertas.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
-      if(!d||!d.vigencia||hoy<d.vigencia.desde||hoy>d.vigencia.hasta||!(d.ofertas||[]).length) return;
+      if(!d||!d.vigencia||!(d.ofertas||[]).length||hoy>d.vigencia.hasta) return;
+      const activa=hoy>=d.vigencia.desde;
+      if(!activa&&dias(hoy,d.vigencia.desde)>PREAVISO_DIAS) return;
+      const g=d.ofertas.find(o=>o.tipo==='gancho')||d.ofertas[0];
+      const rango='del '+corta(d.vigencia.desde)+' al '+corta(d.vigencia.hasta);
+      const quedan=dias(hoy,d.vigencia.hasta);
+      const cuando=activa?(quedan===0?'¡Último día!':'Hasta el '+fecha(d.vigencia.hasta)):'Próximamente · '+rango;
+      const apartar=o=>wa('¡Hola AL NORTE DEL SUR! Quiero apartar: '+o.titulo+' ('+eur(o.precio)+') de la oferta «'+d.campana+'».');
+
+      // 1) Barra de arriba del todo
+      const bar=document.getElementById('promoBar');
+      bar.className='promo-bar'+(activa?'':' pre');
+      document.getElementById('pbTxt').textContent=(activa?'🎁 '+d.campana+': ':'📅 '+d.campana+' ('+rango+'): ')+g.titulo+' a '+eur(g.precio)+(activa?(quedan===0?' · ¡último día!':' · hasta el '+corta(d.vigencia.hasta)):'');
+      const cta=document.getElementById('pbCta');
+      if(activa){cta.textContent='Ver las '+d.ofertas.length+' ofertas';cta.href='#oferta';cta.removeAttribute('target');}
+      else{cta.textContent='Apártalo ya por WhatsApp';cta.href=apartar(g);}
+
+      // 2) Tarjeta en el hero (se ve sin bajar)
+      const hp=document.getElementById('heroPromo');
+      hp.innerHTML=`<div class="hp-head"><span>${esc(activa?d.campana:'Próximamente')}</span><span>${esc(activa?(quedan===0?'Último día':'Hasta '+corta(d.vigencia.hasta)):rango)}</span></div>`+
+        `<div class="hp-main">${g.fotos&&g.fotos[0]?`<img src="${esc(g.fotos[0])}" alt="${esc(g.titulo)}">`:''}<div><h3>${esc(g.titulo)}</h3><p>${esc(g.texto||'')}</p></div></div>`+
+        `<div class="hp-precio"><strong>${eur(g.precio)}</strong><s>antes ${eur(g.precio_antes)}</s></div>`+
+        `<div class="hp-ctas"><a class="btn btn-primary" href="#oferta">Ver ${d.ofertas.length} ofertas</a><a class="btn btn-green" href="${esc(apartar(g))}" target="_blank" rel="noopener">Apártalo por WhatsApp</a></div>`;
+      hp.classList.add('on');
+
+      // 3) Sección completa de ofertas (justo debajo del hero)
       document.getElementById('ofertaTit').textContent=d.campana;
-      document.getElementById('ofertaSub').textContent='Solo en nuestros puestos del Mercado de Ruzafa, mientras haya existencias.';
-      document.getElementById('ofertaVig').textContent='Válido del '+fecha(d.vigencia.desde)+' al '+fecha(d.vigencia.hasta)+'.';
+      document.getElementById('ofertaSub').textContent=activa?'Solo en nuestros puestos del Mercado de Ruzafa, mientras haya existencias. Si quieres asegurarte, apártalo por WhatsApp.':'Empieza el '+fecha(d.vigencia.desde)+'. Apártalo ya por WhatsApp y recógelo esos días en el Mercado de Ruzafa.';
+      document.getElementById('ofertaVig').textContent='Válido del '+fecha(d.vigencia.desde)+' al '+fecha(d.vigencia.hasta)+', mientras haya existencias.';
       document.getElementById('ofertaGrid').innerHTML=d.ofertas.map(o=>{
         const fotos=(o.fotos||[]).map(f=>`<img src="${esc(f)}" alt="" loading="lazy">`).join('');
         const tag=o.tipo==='pack'?'Pack':(o.por_unidades>1?o.por_unidades+' por '+eur(o.precio):'-'+o.ahorro_pct+' %');
-        return `<article class="of-card ${esc(o.tipo)}"><span class="of-tag">${esc(tag)}</span><div class="of-fotos">${fotos}</div><div class="of-body"><h3>${esc(o.titulo)}</h3><p>${esc(o.texto||'')}</p><div class="of-precio"><strong>${eur(o.precio)}</strong><s>antes ${eur(o.precio_antes)}</s></div></div></article>`;
+        return `<article class="of-card ${esc(o.tipo)}"><span class="of-tag">${esc(tag)}</span><div class="of-fotos">${fotos}</div><div class="of-body"><h3>${esc(o.titulo)}</h3><p>${esc(o.texto||'')}</p><div class="of-precio"><strong>${eur(o.precio)}</strong><s>antes ${eur(o.precio_antes)}</s></div>${activa?'':`<span class="of-pre">Desde el ${esc(corta(d.vigencia.desde))}</span>`}<a class="of-wa" href="${esc(apartar(o))}" target="_blank" rel="noopener">💬 Apártalo por WhatsApp</a></div></article>`;
       }).join('');
+      document.querySelector('#oferta .eyebrow').textContent=activa?'Oferta de la semana':'Próximamente';
       document.getElementById('oferta').classList.add('on');
       document.getElementById('navOferta').hidden=false;
     }).catch(()=>{});
