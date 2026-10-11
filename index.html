@@ -760,6 +760,54 @@ footer ul a:hover{color:var(--choclo)}
   </div>
 </section>
 
+<!-- PEDIDOS (formulario Netlify) · bloque reversible: borrar desde aquí hasta FIN PEDIDOS -->
+<style>
+.pedidos{padding:var(--sp-8,64px) 0;background:var(--crema)}
+.ped-form{max-width:600px;margin:0 auto;background:#fff;border-radius:var(--r-md);padding:28px 24px;box-shadow:var(--sombra-sm);border:1px solid rgba(63,45,30,.06)}
+.ped-form label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+.ped-form input,.ped-form select,.ped-form textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1.5px solid rgba(63,45,30,.18);border-radius:var(--r-sm);font:inherit;background:#fff;color:var(--tierra)}
+.ped-form input:focus,.ped-form select:focus,.ped-form textarea:focus{outline:none;border-color:var(--verde)}
+.ped-form textarea{min-height:110px;resize:vertical}
+.ped-form .ped-check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.85rem}
+.ped-form .ped-check input{width:auto;margin-top:4px}
+.ped-form .btn{width:100%;margin-top:20px}
+.ped-oculto{position:absolute;left:-9999px}
+.ped-ok{display:none;text-align:center;font-weight:600;color:var(--verde-dark);margin-bottom:12px}
+.ped-ok.show{display:block}
+</style>
+<section class="pedidos" id="pedidos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pedidos y consultas</span>
+      <h2>¿Te apartamos algo?</h2>
+      <p>Escríbenos qué buscas y te respondemos pronto. Recogida en nuestro puesto del Mercado de Ruzafa.</p>
+    </div>
+    <form class="ped-form reveal" name="pedidos" method="POST" data-netlify="true" netlify-honeypot="web" action="/?enviado=1#pedidos">
+      <p class="ped-ok" id="pedOk">✅ ¡Recibido! Te respondemos muy pronto.</p>
+      <input type="hidden" name="form-name" value="pedidos">
+      <p class="ped-oculto"><label>No rellenar: <input name="web" tabindex="-1" autocomplete="off"></label></p>
+      <label for="ped-nombre">Nombre</label>
+      <input id="ped-nombre" name="nombre" required autocomplete="name">
+      <label for="ped-contacto">Teléfono o correo</label>
+      <input id="ped-contacto" name="contacto" required>
+      <label for="ped-tipo">¿Qué necesitas?</label>
+      <select id="ped-tipo" name="tipo">
+        <option>Hacer un pedido / apartar</option>
+        <option>Consultar un producto o precio</option>
+        <option>Presupuesto para evento o negocio</option>
+        <option>Otra consulta</option>
+      </select>
+      <label for="ped-mensaje">Mensaje</label>
+      <textarea id="ped-mensaje" name="mensaje" required placeholder="Ej.: 2 harinas PAN y queso llanero para el sábado"></textarea>
+      <label class="ped-check"><input type="checkbox" name="privacidad" required> Acepto que AL NORTE DEL SUR use mis datos solo para responder a esta consulta.</label>
+      <label class="ped-check"><input type="checkbox" name="novedades" value="si"> Quiero recibir novedades y ofertas (opcional).</label>
+      <button type="submit" class="btn btn-green">Enviar consulta</button>
+    </form>
+  </div>
+</section>
+<script>if(location.search.indexOf('enviado=1')>-1){var o=document.getElementById('pedOk');if(o)o.classList.add('show');}</script>
+<!-- FIN PEDIDOS -->
+
 <!-- QR -->
 <section class="qr-band" id="qr">
   <div class="wrap">
