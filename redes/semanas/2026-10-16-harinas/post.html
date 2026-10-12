@@ -1,0 +1,161 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222;font-family:Inter,sans-serif}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;color:#fff;background:#1E4229}
+.photo{position:absolute;inset:0;background-size:cover;background-position:center}
+.shade{position:absolute;inset:0}
+.serif{font-family:Lora,serif}
+.kick{font-size:28px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#F2B705}
+.brand{position:absolute;top:56px;left:64px;display:flex;align-items:center;gap:18px;font-weight:700;font-size:26px;letter-spacing:.08em;z-index:3}
+.prod .brand,.cover .brand{background:rgba(14,32,20,.72);padding:8px 24px 8px 8px;border-radius:999px;top:48px;left:56px}
+.brand img{width:76px;height:76px;border-radius:50%;clip-path:circle(47%);background:#fff}
+.num{position:absolute;top:70px;right:64px;font-size:24px;font-weight:600;color:rgba(255,255,255,.75);z-index:3}
+.stripe{position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(90deg,#1E4229 0 33%,#F2B705 33% 66%,#C1352B 66%);z-index:4}
+.star{position:absolute;color:#F2B705;opacity:.55;z-index:2}
+/* cover */
+.cover .shade{background:linear-gradient(180deg,rgba(14,32,20,.55) 0%,rgba(14,32,20,.05) 30%,rgba(14,32,20,.35) 55%,rgba(14,32,20,.96) 82%)}
+.cover .txt{position:absolute;left:64px;right:64px;bottom:110px;z-index:3}
+.cover h1{font-size:132px;line-height:.98;font-weight:700;margin-top:22px}
+.cover h1 em{color:#F2B705;font-style:italic}
+.cover p{font-size:36px;line-height:1.35;margin-top:30px;color:#E7EFE2;max-width:860px}
+.swipe{display:inline-flex;align-items:center;gap:14px;margin-top:40px;font-size:28px;font-weight:700;background:#F2B705;color:#1E4229;padding:16px 30px;border-radius:999px}
+/* product slides */
+.prod .photo{height:830px;bottom:auto}
+.prod .shade{height:830px;bottom:auto;background:linear-gradient(180deg,rgba(14,32,20,.85) 0%,rgba(14,32,20,.35) 14%,rgba(14,32,20,0) 30%,rgba(14,32,20,0) 68%,#1E4229 100%)}
+.prod .body{position:absolute;left:64px;right:64px;top:760px;z-index:3}
+.prod h2{font-size:84px;line-height:1.02;font-weight:700;margin-top:14px}
+.prod ul{list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:20px 36px}
+.prod li{font-size:34px;line-height:1.25;padding-left:34px;position:relative;color:#EEF4EA}
+.prod li:before{content:"✦";position:absolute;left:0;top:1px;color:#F2B705;font-size:24px}
+.prod li b{color:#fff}
+.note{margin-top:28px;font-size:26px;color:#BFD3B9;font-style:italic}
+/* text-only slide */
+.list{background:radial-gradient(circle at 85% 12%,#2d5b3a 0,#1E4229 45%,#163320 100%)}
+.list .body{position:absolute;left:64px;right:64px;top:250px;z-index:3}
+.list h2{font-size:104px;line-height:1;font-weight:700;margin-top:18px}
+.list h2 em{color:#F2B705;font-style:italic}
+.list .lead{font-size:34px;line-height:1.4;color:#DCE8D6;margin-top:26px;max-width:880px}
+.items{margin-top:46px;display:flex;flex-direction:column;gap:0}
+.it{display:flex;align-items:baseline;gap:24px;border-top:1.5px solid rgba(242,183,5,.35);padding:30px 0}
+.it:last-child{border-bottom:1.5px solid rgba(242,183,5,.35)}
+.it span{font-family:Lora,serif;font-size:30px;color:#F2B705;width:48px;flex:none}
+.it b{font-size:42px;font-weight:700;flex:none}
+.it i{font-style:normal;font-size:30px;color:#BFD3B9;margin-left:auto;text-align:right}
+.round{position:absolute;right:-90px;top:-90px;width:420px;height:420px;border-radius:50%;background-size:cover;background-position:center;border:10px solid #F2B705;z-index:2}
+/* cta */
+.cta{background:#F6F1E4;color:#3F2D1E}
+.cta .body{position:absolute;left:72px;right:72px;top:150px}
+.cta .kick{color:#C1352B}
+.cta h2{font-size:110px;line-height:1;color:#1E4229;font-weight:700;margin-top:18px}
+.cta .lead{font-size:34px;line-height:1.4;margin-top:24px;color:#5F5340}
+.cards{margin-top:48px;display:flex;flex-direction:column;gap:22px}
+.card{background:#fff;border-radius:26px;padding:34px 36px;display:flex;gap:26px;align-items:center;box-shadow:0 6px 18px rgba(63,45,30,.08)}
+.card .ic{width:74px;height:74px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:38px;flex:none}
+.card b{display:block;font-size:34px;color:#1E4229}
+.card small{display:block;font-size:27px;color:#5F5340;margin-top:4px;line-height:1.35}
+.cta .brand{color:#1E4229}
+.cta .num{color:#8a7d68}
+
+.leaf{background:radial-gradient(circle at 15% 90%,#2d5b3a 0,#1E4229 50%,#163320 100%)}
+.leaf .body{position:absolute;left:64px;right:64px;top:300px;z-index:3}
+.leaf h2{font-size:104px;line-height:1;font-weight:700;margin-top:18px}
+.leaf h2 em{color:#F2B705;font-style:italic}
+.lcards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:46px}
+.lc{background:rgba(255,255,255,.07);border:1.5px solid rgba(242,183,5,.4);border-radius:28px;padding:44px 34px}
+.lc svg{width:84px;height:84px}
+.lc b{display:block;font-family:Lora,serif;font-size:48px;line-height:1.05;margin-top:18px}
+.lc small{display:block;font-size:30px;line-height:1.4;color:#CFE0C9;margin-top:12px}
+.promo{margin-top:46px;background:#F2B705;color:#1E4229;border-radius:28px;padding:44px 40px;position:relative}
+.promo .tag{display:inline-block;background:#C1352B;color:#fff;font-size:22px;font-weight:800;letter-spacing:.16em;padding:8px 16px;border-radius:999px}
+.promo b{display:block;font-family:Lora,serif;font-size:62px;line-height:1.02;margin-top:14px}
+.promo small{display:block;font-size:31px;line-height:1.4;margin-top:12px;font-weight:500}
+.bigleaf{position:absolute;right:-140px;top:-120px;width:620px;opacity:.13;z-index:1;transform:rotate(-28deg)}
+
+.enc .shade{background:linear-gradient(180deg,rgba(14,32,20,.80) 0%,rgba(14,32,20,.55) 40%,rgba(14,32,20,.92) 70%,#1E4229 100%)}
+.enc .body{position:absolute;left:64px;right:64px;top:210px;z-index:3}
+.enc h2{font-size:112px;line-height:.98;font-weight:700;margin-top:18px}
+.enc h2 em{color:#F2B705;font-style:italic}
+.enc .lead{font-size:34px;line-height:1.4;color:#E4EEDD;margin-top:24px;max-width:860px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:190px}
+.ec{background:#F6F1E4;color:#1E4229;border-radius:28px;padding:34px 32px}
+.ec .e{font-size:54px}
+.ec b{display:block;font-family:Lora,serif;font-size:50px;line-height:1.02;margin-top:10px}
+.ec small{display:block;font-size:28px;line-height:1.35;color:#5F5340;margin-top:10px}
+.ebtn{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:16px;background:#25D366;color:#073b1e;font-weight:800;font-size:36px;border-radius:999px;padding:24px}
+.leafimg{position:absolute;right:-70px;top:-70px;width:380px;height:380px;border-radius:50%;background-size:230%;background-position:62% 2%;border:10px solid #F2B705;z-index:2}
+
+.steps{margin-top:40px;display:flex;flex-direction:column}
+.st{display:flex;gap:28px;align-items:flex-start;border-top:1.5px solid rgba(242,183,5,.35);padding:28px 0}
+.st:last-child{border-bottom:1.5px solid rgba(242,183,5,.35)}
+.st span{font-family:Lora,serif;font-size:56px;line-height:1;color:#F2B705;width:70px;flex:none}
+.st b{display:block;font-size:40px}
+.st small{display:block;font-size:29px;line-height:1.4;color:#CFE0C9;margin-top:6px}
+</style></head><body>
+<section class="s cover">
+  <div class="photo" style="background-image:url(../../fotos/hallacas.jpg);background-position:45% 50%"></div>
+  <div class="shade"></div>
+  <div class="brand"><img src="../../plantilla/logo.png">AL NORTE DEL SUR</div>
+  
+  <div class="star" style="top:190px;right:120px;font-size:54px">✦</div>
+  <div class="star" style="top:290px;right:220px;font-size:28px">✦</div>
+  <div class="txt">
+    <div class="kick">Para guardar · Cocina latina</div>
+    <h1 class="serif" style="font-size:120px">¿Qué harina<br>para qué <em>receta</em>?</h1>
+    <p>Arepa, hallaca, tamal o empanada: cada masa pide su harina. Guarda esta guía y acierta siempre.</p>
+    <div class="swipe">Desliza la guía →</div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s list">
+  <div class="round" style="background-image:url(../../fotos/hallacas.jpg);width:360px;height:360px;right:-80px;top:-80px"></div>
+  <div class="brand"><img src="../../plantilla/logo.png">AL NORTE DEL SUR</div>
+  <div class="body" style="top:230px">
+    <div class="kick">La guía rápida</div>
+    <h2 class="serif" style="font-size:96px">Cada masa,<br>su <em>harina</em></h2>
+    <div class="steps" style="margin-top:34px">
+      <div class="st" style="padding:30px 0"><span>1</span><div><b>Arepa</b><small>P.A.N. blanca · América precocida · Masarepa Goya</small></div></div>
+      <div class="st" style="padding:30px 0"><span>2</span><div><b>Hallaca</b><small>P.A.N. blanca o amarilla, con onoto para el color</small></div></div>
+      <div class="st" style="padding:30px 0"><span>3</span><div><b>Tamal mexicano</b><small>Maseca, envuelto en hojas de maíz</small></div></div>
+      <div class="st" style="padding:30px 0"><span>4</span><div><b>Empanada</b><small>P.A.N. amarilla · Masarica Goya</small></div></div>
+      <div class="st" style="padding:30px 0"><span>5</span><div><b>Cachapa</b><small>Harina de cachapas La Mantuana</small></div></div>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s leaf">
+  <svg class="bigleaf" viewBox="0 0 100 100"><path d="M50 2C20 24 10 58 50 98C90 58 80 24 50 2Z" fill="#F2B705"/><path d="M50 8V94M50 26L30 14M50 26L70 14M50 42L24 28M50 42L76 28M50 58L26 46M50 58L74 46M50 74L32 64M50 74L68 64" stroke="#1E4229" stroke-width="2" fill="none"/></svg>
+  <div class="brand"><img src="../../plantilla/logo.png">AL NORTE DEL SUR</div>
+  <div class="body" style="top:300px">
+    <div class="kick">El truco de la casa</div>
+    <h2 class="serif">No todas son<br><em>iguales</em></h2>
+    <div class="lcards">
+      <div class="lc"><b style="margin-top:0">Precocida</b><small>P.A.N., América, Masarepa y Masarica.<br>Para arepas, hallacas y empanadas.</small></div>
+      <div class="lc"><b style="margin-top:0">Nixtamalizada</b><small>Maseca.<br>Para tamales y tortillas mexicanas.</small></div>
+    </div>
+    <div class="promo">
+      <span class="tag">OJO</span>
+      <b>No se cambian una por otra</b>
+      <small>Con Maseca la arepa no queda igual, y con harina precocida las tortillas se rompen.</small>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+
+<section class="s cta">
+  <div class="brand"><img src="../../plantilla/logo.png">AL NORTE DEL SUR</div>
+  <div class="body">
+    <div class="kick">Te ayudamos a elegir</div>
+    <h2 class="serif">Todas en un solo puesto</h2>
+    <p class="lead">¿Dudas con tu receta? Pregúntanos y te decimos cuál llevar.</p>
+    <div class="cards">
+      <div class="card"><div class="ic" style="background:#E7F0E3">📍</div><div><b>Mercado de Ruzafa</b><small>Puestos 213-220 · lunes a sábado 8:00-14:30<br>Puestos 107-108 · lunes a viernes 17:00-20:00</small></div></div>
+      <div class="card"><div class="ic" style="background:#E3F6EA">💬</div><div><b>WhatsApp 671 339 005</b><small>Te resolvemos dudas y te apartamos lo que necesites</small></div></div>
+      <div class="card"><div class="ic" style="background:#FDF1CC">🌿</div><div><b>Y para envolver</b><small>Hojas de plátano y hojas de maíz</small></div></div>
+      <div class="card"><div class="ic" style="background:#E6EEFB">🔖</div><div><b>Guárdala para tu próxima receta</b><small>Instagram @alnortedelsur_es · alnortedelsurvlc.com</small></div></div>
+    </div>
+  </div>
+  <div class="stripe"></div>
+</section>
+</body></html>
