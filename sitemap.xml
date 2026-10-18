@@ -99,4 +99,14 @@
       <image:title>Logo de AL NORTE DEL SUR</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://alnortedelsurvlc.com/colada-morada.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://alnortedelsurvlc.com/assets/img/colada-morada-ingredientes.jpg</image:loc>
+      <image:title>Ingredientes de la colada morada ecuatoriana — AL NORTE DEL SUR</image:title>
+    </image:image>
+  </url>
 </urlset>
