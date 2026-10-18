@@ -5,6 +5,7 @@
 - `plantilla/render.cjs`: convierte un HTML en imágenes JPG (una por `<section>`).
 - `fotos/`: fotos propias sacadas del Instagram de la tienda.
 - `semanas/AAAA-MM-DD-tema/`: imágenes listas de cada publicación (1.jpg, 2.jpg...) y `texto.txt` con el texto.
+- `listos-para-publicar/AAAA-MM-DD-tema/`: lo ya aprobado por José, esperando su fecha (ver su LEEME).
 
 Reglas: nunca inventar precios, fechas ni existencias; no ofrecer envíos a domicilio; no publicar nada sin el «sí» de José.
 Productos: solo los del catálogo `productos_tpv.csv` (Drive) o los que José haya pedido expresamente (ají dulce, hallacas y pan de jamón por encargo).
