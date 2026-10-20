@@ -24,7 +24,20 @@ Netlify está conectado a este repositorio:
 - Cuenta de Netlify: **alnortedelsurvlc@gmail.com**
 - Rama `main` · Carpeta de publicación: la raíz · Sin comando de compilación
 
-**Cada cambio que se sube a `main` se publica solo en 1-2 minutos.**
+**Desde el 20/10/2026 la web SOLO se publica cuando José lo pide** (freno en
+`netlify.toml` → `_control/publicar-solo-si-se-pide.sh`).
+
+- Cada publicación gasta **15 créditos**; el plan gratis da **300 al mes** (20
+  publicaciones; el ciclo empieza el día 27). Al agotarlos no se puede publicar
+  y, si se acaban también los de emergencia, la web se apaga.
+- Robots, tareas en la nube y sesiones de Claude **suben cambios a `main` como
+  siempre**, pero Netlify los guarda sin publicar (no gastan créditos).
+- **Para publicar todo lo acumulado:** doble clic en `PUBLICAR WEB.command`
+  (Mac), o pedirle a Claude «publica la web». Crea un cambio con `[publicar]`
+  en el mensaje y la web queda al día en 1-2 minutos.
+- ⚠️ Nadie (robot ni Claude) escribe `[publicar]` en un mensaje sin la orden
+  de José en ese momento.
+- Quitar el freno: borrar `netlify.toml`.
 
 ## Por qué la web está separada de la contabilidad
 

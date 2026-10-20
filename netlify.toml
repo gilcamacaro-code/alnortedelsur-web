@@ -1,0 +1,6 @@
+# Freno de publicación (orden de José, 20/10/2026): cada publicación gasta
+# 15 de los 300 créditos gratis al mes. Los robots y las sesiones de Claude
+# suben cambios cuando quieran, pero la web solo se publica cuando José lo
+# pide (cambio con [publicar] en el mensaje: lanzador «PUBLICAR WEB»).
+[build]
+  ignore = "bash _control/publicar-solo-si-se-pide.sh"
