@@ -17,13 +17,6 @@
    "enlace": "https://www.instagram.com/p/DebVU99DepR/"
   },
   {
-   "fecha": "2026-10-16",
-   "tema": "¿Qué harina para qué receta?",
-   "estado": "para_aprobar",
-   "falta": "",
-   "idea": "Arepa, hallaca, tamal y empanada: P.A.N., Maseca, La Mantuana, América precocida, Masarica Goya. Contenido para guardar. Carrusel de 4 hecho en semanas/2026-10-16-harinas."
-  },
-  {
    "fecha": "2026-10-18",
    "tema": "Colada morada · reel gancho (10 s)",
    "estado": "publicado",
@@ -33,9 +26,9 @@
   {
    "fecha": "2026-10-20",
    "tema": "El puesto por dentro · reel corto",
-   "estado": "falta_dato",
-   "falta": "Vídeo de 15 s grabado en la tienda",
-   "idea": "Reel del puesto con ají y hojas."
+   "estado": "publicado",
+   "falta": "",
+   "idea": "Reel del puesto con ají y hojas. Visto publicado en Instagram y Facebook (Meta Business Suite, 23/10)."
   },
   {
    "fecha": "2026-10-23",
@@ -60,10 +53,11 @@
   },
   {
    "fecha": "2026-10-27",
-   "tema": "Último aviso: se acaba el ají dulce",
-   "estado": "pendiente",
-   "falta": "",
-   "idea": "Urgencia de fin de temporada; congélalo para las hallacas."
+   "tema": "Los puestos como un todo · «Dos puestos, un solo sur»",
+   "estado": "para_aprobar",
+   "falta": "Confirmar horarios (213-220 L-S 8:00-14:30; 107-108 L-V 17:00-20:00)",
+   "idea": "Carrusel de 5: portada con fotos reales del puesto, despensa latina, quesos y embutidos, hallacas y pan de jamón por encargo, dónde y cuándo. Imágenes en semanas/2026-10-27-los-puestos.",
+   "carpeta": "redes/semanas/2026-10-27-los-puestos"
   },
   {
    "fecha": "2026-10-28",
@@ -72,6 +66,13 @@
    "falta": "",
    "idea": "Aprobado 18/10. Archivos en redes/listos-para-publicar/2026-10-28-colada-morada-receta/. Reel en Instagram + vídeo en Facebook a las 17:00.",
    "carpeta": "redes/listos-para-publicar/2026-10-28-colada-morada-receta"
+  },
+  {
+   "fecha": "2026-10-29",
+   "tema": "Último aviso: se acaba el ají dulce",
+   "estado": "pendiente",
+   "falta": "",
+   "idea": "Urgencia de fin de temporada; congélalo para las hallacas."
   },
   {
    "fecha": "2026-10-30",
@@ -93,6 +94,13 @@
    "estado": "falta_dato",
    "falta": "Precios (hallaca unidad y docena, pan de jamón) y fecha límite",
    "idea": "La publicación más importante de la temporada."
+  },
+  {
+   "fecha": "2026-11-04",
+   "tema": "¿Qué harina para qué receta?",
+   "estado": "para_aprobar",
+   "falta": "",
+   "idea": "Arepa, hallaca, tamal y empanada: P.A.N., Maseca, La Mantuana, América precocida, Masarica Goya. Contenido para guardar. Carrusel de 4 hecho en semanas/2026-10-16-harinas. Reprogramado desde el 16/10: sigue pendiente de aprobación."
   },
   {
    "fecha": "2026-11-06",
