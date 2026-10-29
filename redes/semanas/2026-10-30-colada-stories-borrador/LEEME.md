@@ -1,0 +1,1 @@
+Borrador de 2 historias (30 y 31 oct). Zona superior (1080x1040) reservada para las fotos de José: sustituir foto1.jpg / foto2.jpg, re-renderizar stories.html a 1080x1920 y programar como STORY en Metricool. El enlace se añade a mano en Instagram.
