@@ -2,6 +2,56 @@
  "nota": "La web muestra la PRIMERA campaña con activa distinta de false que esté en vigencia (o a 5 días o menos de empezar). Al caducar, pasa sola a la siguiente.",
  "campanas": [
   {
+   "campana": "Colada morada y Día de Muertos · horario especial",
+   "antetitulo": "Este fin de semana",
+   "subtitulo": "Sábado 31 abrimos de 8:30 a 15:00 en los puestos 213-220. Y SOLO este domingo 1 de noviembre abrimos de 10:00 a 14:00 en los puestos 107-108, para que no te falte nada de la colada morada, los tamales y el Día de los Muertos.",
+   "nota_vigencia": "Horario especial solo este domingo 1 de noviembre, de 10:00 a 14:00, en los puestos 107-108 del Mercado de Ruzafa. ¿Te lo apartamos? WhatsApp 671 339 005.",
+   "boton": "Ver lo que tenemos",
+   "vigencia": {
+    "desde": "2026-10-30",
+    "hasta": "2026-11-01"
+   },
+   "ofertas": [
+    {
+     "id": "domingo",
+     "tipo": "gancho",
+     "titulo": "Domingo 1 abierto de 10:00 a 14:00",
+     "texto": "Solo este domingo, puestos 107-108. Todo para tu colada morada, tus tamales y el Día de los Muertos.",
+     "precio": null,
+     "etiqueta": "Solo este domingo",
+     "boton": "Apártalo por WhatsApp",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/velas-dia-muertos.jpg"
+     ]
+    },
+    {
+     "id": "colada",
+     "tipo": "normal",
+     "titulo": "Ingredientes de la colada morada",
+     "texto": "Maíz y harina morada, flor de Jamaica, hierba luisa, cedrón, canela, clavo y más.",
+     "precio": null,
+     "etiqueta": "Colada morada",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/colada-ingredientes.jpg"
+     ]
+    },
+    {
+     "id": "hojas",
+     "tipo": "normal",
+     "titulo": "Hojas para tus tamales",
+     "texto": "Hojas de plátano y hoja de choclo, y harinas para la masa.",
+     "precio": null,
+     "etiqueta": "Para tamales",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/hojas.jpg"
+     ]
+    }
+   ]
+  },
+  {
    "campana": "Navidad latina · Diciembre sabe a casa",
    "antetitulo": "Navidad 2026",
    "subtitulo": "Hallacas y pan de jamón por encargo, y todo para hacerlas en casa. Cuanto más llevas, mejor precio. Escríbenos por WhatsApp y te lo apartamos para recogerlo en el Mercado de Ruzafa.",
