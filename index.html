@@ -407,6 +407,34 @@ footer ul a:hover{color:var(--choclo)}
 .of-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--sp-5,20px);margin-top:var(--sp-6,28px)}
 .of-card{position:relative;background:var(--blanco);border-radius:var(--r-md);box-shadow:var(--sombra-sm);overflow:hidden;display:flex;flex-direction:column}
 .of-card.gancho{outline:3px solid var(--choclo)}
+/* ENCARGO COMPACTO + INGREDIENTES (11/11/2026): si la campaña trae "ingredientes" en ofertas.json,
+   el encargo pasa a una franja baja y debajo van las fotos de los ingredientes que hay en la tienda. */
+.of-banner{display:flex;align-items:center;gap:16px;background:var(--blanco);border-radius:var(--r-md);box-shadow:var(--sombra-sm);outline:3px solid var(--choclo);padding:12px 16px;margin-top:var(--sp-5,20px)}
+.of-banner img{width:84px;height:84px;object-fit:cover;border-radius:10px;flex-shrink:0}
+.of-banner .ob-txt{flex:1;min-width:0}
+.of-banner .ob-tag{display:inline-block;background:var(--caribe);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:2px 10px;border-radius:var(--r-full);margin-bottom:4px}
+.of-banner h3{font-family:var(--f-display);font-size:1.2rem;line-height:1.2;color:var(--tierra);margin:0}
+.of-banner p{font-size:var(--fs-sm);color:var(--tierra-soft);margin:2px 0 0}
+.of-banner .btn{flex-shrink:0;padding:11px 20px;font-size:.92rem}
+.of-ing{margin-top:var(--sp-6,28px)}
+.of-ing h3{font-family:var(--f-display);font-size:1.35rem;color:var(--tierra);text-align:center;margin:0 0 4px}
+.of-ing>p{font-size:var(--fs-sm);color:var(--tierra-soft);text-align:center;margin:0 0 16px}
+.ing-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.ing{display:flex;flex-direction:column;background:var(--blanco);border-radius:var(--r-md);box-shadow:var(--sombra-sm);overflow:hidden;text-decoration:none;color:var(--tierra);transition:transform var(--t-fast),box-shadow var(--t-fast)}
+.ing:hover,.ing:focus-visible{transform:translateY(-3px);box-shadow:var(--sombra)}
+.ing img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:8px}
+.ing img.foto{object-fit:cover;padding:0}
+.ing span{display:block;padding:8px 8px 10px;font-weight:700;font-size:.84rem;line-height:1.2;text-align:center;border-top:1px solid rgba(63,45,30,.08)}
+.ing small{display:block;font-weight:400;font-size:.72rem;color:var(--tierra-soft);margin-top:2px}
+@media(max-width:980px){.ing-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:560px){
+  .ing-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .ing span{font-size:.76rem;padding:6px 4px 8px} .ing small{display:none}
+  .of-banner{flex-wrap:wrap;gap:12px;padding:12px}
+  .of-banner img{width:64px;height:64px}
+  .of-banner h3{font-size:1.05rem}
+  .of-banner .btn{width:100%}
+}
 .of-fotos{display:flex;gap:6px;justify-content:center;align-items:center;height:170px;padding:14px;background:#fff}
 .of-fotos img{max-height:140px;max-width:48%;object-fit:contain}
 .of-fotos img:only-child{max-width:80%}
@@ -593,7 +621,9 @@ footer ul a:hover{color:var(--choclo)}
       <h2 id="ofertaTit">Ofertas</h2>
       <p id="ofertaSub"></p>
     </div>
+    <div id="ofertaBanner"></div>
     <div class="of-grid" id="ofertaGrid"></div>
+    <div class="of-ing" id="ofertaIng" hidden><h3 id="ingTit"></h3><p id="ingSub"></p><div class="ing-grid" id="ingGrid"></div></div>
     <p class="of-vig" id="ofertaVig"></p>
   </div>
 </section>
@@ -1130,7 +1160,18 @@ footer ul a:hover{color:var(--choclo)}
       document.getElementById('ofertaTit').textContent=d.campana;
       document.getElementById('ofertaSub').textContent=d.subtitulo?d.subtitulo:activa?'Solo en nuestros puestos del Mercado de Ruzafa, mientras haya existencias. Si quieres asegurarte, apártalo por WhatsApp.':'Empieza el '+fecha(d.vigencia.desde)+'. Apártalo ya por WhatsApp y recógelo esos días en el Mercado de Ruzafa.';
       document.getElementById('ofertaVig').textContent=d.nota_vigencia||('Válido del '+fecha(d.vigencia.desde)+' al '+fecha(d.vigencia.hasta)+', mientras haya existencias.');
-      document.getElementById('ofertaGrid').innerHTML=d.ofertas.map(o=>{
+      // Si la campaña trae "ingredientes": el encargo va en franja compacta y debajo las fotos de los ingredientes.
+      const ing=d.ingredientes||[];
+      if(ing.length){
+        document.getElementById('ofertaBanner').innerHTML=`<div class="of-banner">${g.fotos&&g.fotos[0]?`<img src="${esc(g.fotos[0])}" alt="">`:''}<div class="ob-txt">${g.etiqueta?`<span class="ob-tag">${esc(g.etiqueta)}</span>`:''}<h3>${esc(g.titulo)}</h3><p>${esc(g.texto||'')}</p></div><a class="btn btn-green" href="${esc(apartar(g))}" target="_blank" rel="noopener">${esc(g.boton||'Apártalo por WhatsApp')}</a></div>`;
+        document.getElementById('ingTit').textContent=d.ingredientes_titulo||'Ingredientes que tenemos en la tienda';
+        document.getElementById('ingSub').textContent=d.ingredientes_texto||'';
+        document.getElementById('ingGrid').innerHTML=ing.map(i=>`<a class="ing" href="${esc(wa('¡Hola AL NORTE DEL SUR! ¿Tienen '+i.titulo+'? («'+d.campana+'»)'))}" target="_blank" rel="noopener"><img${i.foto_completa?' class="foto"':''} src="${esc(i.foto)}" alt="${esc(i.titulo)}" loading="lazy"><span>${esc(i.titulo)}${i.texto?`<small>${esc(i.texto)}</small>`:''}</span></a>`).join('');
+        document.getElementById('ofertaIng').hidden=false;
+      }
+      const resto=ing.length?d.ofertas.filter(o=>o!==g):d.ofertas;
+      document.getElementById('ofertaGrid').style.display=resto.length?'':'none';
+      document.getElementById('ofertaGrid').innerHTML=resto.map(o=>{
         const fotos=(o.fotos||[]).map(f=>`<img${o.foto_completa?' class="foto"':''} src="${esc(f)}" alt="" loading="lazy">`).join('');
         const tag=o.etiqueta?o.etiqueta:o.tipo==='pack'?'Pack':(o.por_unidades>1?o.por_unidades+' por '+eur(o.precio):'-'+o.ahorro_pct+' %');
         return `<article class="of-card ${esc(o.tipo)}"><span class="of-tag">${esc(tag)}</span><div class="of-fotos">${fotos}</div><div class="of-body"><h3>${esc(o.titulo)}</h3><p>${esc(o.texto||'')}</p>${o.precio!=null?`<div class="of-precio"><strong>${eur(o.precio)}</strong><s>antes ${eur(o.precio_antes)}</s></div>`:''}${activa?'':`<span class="of-pre">Desde el ${esc(corta(d.vigencia.desde))}</span>`}<a class="of-wa" href="${esc(apartar(o))}" target="_blank" rel="noopener">💬 ${esc(o.boton||'Apártalo por WhatsApp')}</a></div></article>`;

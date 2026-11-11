@@ -1,5 +1,5 @@
 {
- "nota": "La web muestra la PRIMERA campaña con activa distinta de false que esté en vigencia (o a 5 días o menos de empezar). Al caducar, pasa sola a la siguiente.",
+ "nota": "La web muestra la PRIMERA campaña con activa distinta de false que esté en vigencia (o a 5 días o menos de empezar). Al caducar, pasa sola a la siguiente. Si una campaña trae \"ingredientes\" (titulo, texto opcional, foto), el encargo sale en franja compacta y debajo las fotos de los ingredientes.",
  "campanas": [
   {
    "campana": "Colada morada y Día de Muertos · horario especial",
@@ -74,42 +74,62 @@
      "fotos": [
       "redes/fotos/hallacas.jpg"
      ]
+    }
+   ],
+   "ingredientes_titulo": "Y todo para hacerlas en casa",
+   "ingredientes_texto": "Los ingredientes de la hallaca que tenemos en la tienda. Toca uno y pregúntanos por WhatsApp. También tenemos pabilo para amarrarlas.",
+   "ingredientes": [
+    {
+     "titulo": "Hojas de plátano",
+     "texto": "Y de maíz, para hallacas y tamales",
+     "foto": "redes/fotos/productos-hallaca/hoja-de-platano-maizo-500-g-cj-x-12.jpg"
     },
     {
-     "id": "aji",
-     "tipo": "normal",
-     "titulo": "Ají dulce de temporada",
-     "texto": "El alma del guiso de tus hallacas. Llévatelo ahora y congélalo para diciembre.",
-     "precio": null,
-     "etiqueta": "Temporada",
-     "foto_completa": true,
-     "fotos": [
-      "redes/fotos/aji1.jpg"
-     ]
+     "titulo": "Ají dulce",
+     "texto": "De temporada",
+     "foto": "redes/fotos/aji1.jpg",
+     "foto_completa": true
     },
     {
-     "id": "hojas",
-     "tipo": "normal",
-     "titulo": "Variedad de hojas",
-     "texto": "Hojas de plátano y de maíz para hallacas, tamales, pasteles y humitas.",
-     "precio": null,
-     "etiqueta": "Mejor precio por cantidad",
-     "foto_completa": true,
-     "fotos": [
-      "redes/fotos/hojas.jpg"
-     ]
+     "titulo": "Harinas de maíz",
+     "texto": "P.A.N., Maseca, La Mantuana, América y Masarica",
+     "foto": "redes/fotos/productos-hallaca/harina-pan-blanca-1-kg.jpg"
     },
     {
-     "id": "harinas",
-     "tipo": "normal",
-     "titulo": "Harinas de maíz de todas las marcas",
-     "texto": "P.A.N., Maseca, La Mantuana, América precocida y Masarica.",
-     "precio": null,
-     "etiqueta": "Mejor precio por cantidad",
-     "foto_completa": true,
-     "fotos": [
-      "assets/img/harinas-real.jpg"
-     ]
+     "titulo": "Onoto (achiote) en grano",
+     "foto": "redes/fotos/productos-hallaca/achiote-en-grano-america-500-gr.jpg"
+    },
+    {
+     "titulo": "Aceite con achiote",
+     "foto": "redes/fotos/productos-hallaca/aceite-con-achiote-botella-450-ml-coexito.jpg"
+    },
+    {
+     "titulo": "Aceitunas",
+     "foto": "redes/fotos/productos-hallaca/aceituna-de-botija-lalatina-330-g.jpg"
+    },
+    {
+     "titulo": "Alcaparras",
+     "foto": "redes/fotos/productos-hallaca/alcaparras-goya.jpg"
+    },
+    {
+     "titulo": "Pasas",
+     "foto": "redes/fotos/productos-hallaca/pasas-goya.jpg"
+    },
+    {
+     "titulo": "Adobo",
+     "foto": "redes/fotos/productos-hallaca/sazon-adobo-la-comadre-200-g.jpg"
+    },
+    {
+     "titulo": "Panela (papelón)",
+     "foto": "redes/fotos/productos-hallaca/panela-fraccionada-goya.jpg"
+    },
+    {
+     "titulo": "Ajo",
+     "foto": "redes/fotos/productos-hallaca/ajos-rojos.jpg"
+    },
+    {
+     "titulo": "Cebollín",
+     "foto": "redes/fotos/productos-hallaca/cebolla-fina.jpg"
     }
    ]
   }
