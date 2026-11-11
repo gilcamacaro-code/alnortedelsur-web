@@ -85,7 +85,9 @@
   --tierra-soft:#5F5340;    /* tinta secundaria */
   --choclo:#F2B705;         /* oro maíz — acción principal */
   --choclo-dark:#C28E04;    /* oro pisado / hover */
-  --chile:#C1352B;          /* rojo chile — acento editorial */
+  --caribe:#087F7B;         /* turquesa caribe — acento de marca (sustituye al rojo, pedido de José) */
+  --caribe-dark:#066460;
+  --chile:#C1352B;          /* rojo chile — SOLO semáforo del picante y aviso «cerrado» */
   --chile-dark:#9A2A22;
   --verde:#16A34A;          /* verde — estado abierto, WhatsApp */
   --verde-dark:#0E7C37;
@@ -139,7 +141,7 @@ button{font-family:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 var(--sp-5)}
 section{padding:var(--sp-9) 0}
 .center{text-align:center}
-.eyebrow{display:inline-block;font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--chile);margin-bottom:var(--sp-4)}
+.eyebrow{display:inline-block;font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--caribe);margin-bottom:var(--sp-4)}
 
 /* Accesibilidad: foco visible consistente en TODA la web (teclado) */
 :focus-visible{outline:3px solid var(--choclo);outline-offset:3px;border-radius:6px}
@@ -181,7 +183,7 @@ section{padding:var(--sp-9) 0}
 .card-body h4{font-size:1.1rem;font-family:var(--f-display)}
 .card-body .origen{font-size:.8rem;color:var(--tierra-soft)}
 .card-body p{font-size:var(--fs-sm);color:var(--tierra-soft);flex:1}
-.brands{font-size:var(--fs-xs);color:var(--chile);font-weight:700;letter-spacing:.02em}
+.brands{font-size:var(--fs-xs);color:var(--caribe);font-weight:700;letter-spacing:.02em}
 
 /* Pestañas del catálogo (accesibles: aria-selected) */
 .tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:var(--sp-6)}
@@ -202,14 +204,14 @@ header{position:sticky;top:0;z-index:100;background:var(--glass-claro);backdrop-
 .logo-link{display:flex;align-items:center;gap:13px}
 .logo-img{width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 4px 14px rgba(63,45,30,.2);border:2px solid var(--choclo)}
 .logo-txt{font-family:var(--f-display);font-weight:900;font-size:1.35rem;line-height:1}
-.logo-txt small{display:block;font-family:var(--f-ui);font-weight:600;font-size:.56rem;letter-spacing:.24em;color:var(--chile);text-transform:uppercase;margin-top:3px}
+.logo-txt small{display:block;font-family:var(--f-ui);font-weight:600;font-size:.56rem;letter-spacing:.24em;color:var(--caribe);text-transform:uppercase;margin-top:3px}
 .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
 .nav-links a{font-weight:600;font-size:.94rem;position:relative;padding:4px 0}
 .nav-links a:not(.soc)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--choclo);transition:width var(--t-med) var(--ease)}
 .nav-links a:hover::after{width:100%}
 .nav-social{display:flex;gap:8px}
 .nav-social a{width:36px;height:36px;border-radius:50%;background:var(--tierra);color:var(--crema);display:flex;align-items:center;justify-content:center;transition:background var(--t-fast),transform var(--t-fast)}
-.nav-social a:hover{background:var(--chile);transform:translateY(-2px)}
+.nav-social a:hover{background:var(--caribe);transform:translateY(-2px)}
 .nav-social a::after{display:none}
 .burger{display:none;font-size:1.6rem;cursor:pointer;background:none;border:none;color:var(--tierra);padding:6px 10px;border-radius:var(--r-sm)}
 
@@ -412,14 +414,14 @@ footer ul a:hover{color:var(--choclo)}
 .of-body h3{font-family:var(--f-display);font-size:1.12rem;line-height:1.25;color:var(--tierra);margin:0}
 .of-body p{font-size:var(--fs-sm);color:var(--tierra-soft);margin:0}
 .of-precio{margin-top:auto;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.of-precio strong{font-size:1.6rem;color:var(--chile);font-weight:800}
+.of-precio strong{font-size:1.6rem;color:var(--caribe);font-weight:800}
 .of-precio s{color:var(--tierra-soft);font-size:var(--fs-sm)}
-.of-tag{position:absolute;top:10px;left:10px;background:var(--chile);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 10px;border-radius:var(--r-full)}
+.of-tag{position:absolute;top:10px;left:10px;background:var(--caribe);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 10px;border-radius:var(--r-full)}
 .of-vig{font-size:var(--fs-sm);color:var(--tierra-soft);margin-top:var(--sp-5,20px);text-align:center}
 
 /* PROMO ARRIBA DEL TODO (11/10/2026): barra de aviso + tarjeta en el hero. Lee ofertas.json.
    Sin campaña: mensaje fijo de "te lo apartamos". Para quitarlo todo: borrar #promoBar y #heroPromo. */
-.promo-bar{background:var(--chile);color:#fff;font-size:.92rem;font-weight:600;line-height:1.35}
+.promo-bar{background:var(--caribe);color:#fff;font-size:.92rem;font-weight:600;line-height:1.35}
 .promo-bar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;text-align:center}
 .promo-bar a.pb-cta{background:var(--choclo);color:var(--tierra-900);padding:6px 14px;border-radius:var(--r-full);font-weight:800;white-space:nowrap;text-decoration:none}
 .promo-bar a.pb-cta:hover{background:#fff}
@@ -428,13 +430,13 @@ footer ul a:hover{color:var(--choclo)}
 .hero>.wrap{width:100%}
 .hero-promo{display:none;width:330px;flex-shrink:0;background:rgba(255,255,255,.97);color:var(--tierra);border-radius:var(--r-lg);box-shadow:0 18px 50px rgba(0,0,0,.35);overflow:hidden;border:3px solid var(--choclo)}
 .hero-promo.on{display:block}
-.hp-head{background:var(--chile);color:#fff;font-size:var(--fs-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;display:flex;justify-content:space-between;gap:8px}
+.hp-head{background:var(--caribe);color:#fff;font-size:var(--fs-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;display:flex;justify-content:space-between;gap:8px}
 .hp-main{display:flex;gap:14px;align-items:center;padding:14px 16px 6px}
 .hp-main img{width:96px;height:96px;object-fit:contain;flex-shrink:0;background:#fff}
 .hp-main h3{font-family:var(--f-display);font-size:1.15rem;line-height:1.2;margin:0 0 4px;color:var(--tierra)}
 .hp-main p{font-size:var(--fs-sm);margin:0;color:var(--tierra-soft)}
 .hp-precio{display:flex;align-items:baseline;gap:10px;padding:0 16px}
-.hp-precio strong{font-size:2rem;font-weight:800;color:var(--chile)}
+.hp-precio strong{font-size:2rem;font-weight:800;color:var(--caribe)}
 .hp-precio s{font-size:var(--fs-sm);color:var(--tierra-soft)}
 .hp-ctas{display:flex;flex-direction:column;gap:8px;padding:12px 16px 16px}
 .hp-ctas .btn{width:100%;justify-content:center;padding:12px 16px;font-size:.92rem}
@@ -442,6 +444,66 @@ footer ul a:hover{color:var(--choclo)}
 .of-fotos img.foto{max-height:none;max-width:100%;width:100%;height:100%;object-fit:cover;border-radius:8px}
 .of-wa{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:700;font-size:var(--fs-sm);color:var(--verde-dark)}
 .of-pre{display:inline-block;background:var(--tierra-900);color:#fff;font-size:var(--fs-xs);font-weight:700;padding:4px 12px;border-radius:var(--r-full);margin-top:8px}
+/* REEL EN EL HERO (11/11/2026): recuadro vertical arriba a la derecha, visible al abrir.
+   Arranca solo y SIN sonido; el botón lo activa. Para cambiar de reel: sustituir el .mp4 y el .jpg
+   de assets/reels/ y el texto de .hr-pie. Regla de José: todo reel de la web va también a Instagram y Facebook. */
+.hero-side{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.hero-reel{position:relative;width:196px;aspect-ratio:9/16;flex-shrink:0;border-radius:var(--r-lg);overflow:hidden;border:3px solid var(--choclo);box-shadow:0 18px 50px rgba(0,0,0,.45);background:#0b1a10}
+.hero-reel video{width:100%;height:100%;object-fit:cover;display:block}
+.hr-tag{position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.6);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;padding:4px 10px;border-radius:var(--r-full)}
+.hr-tag i{width:7px;height:7px;border-radius:50%;background:var(--choclo)}
+.hr-snd{position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(0,0,0,.6);color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.hr-snd:focus-visible{outline:3px solid var(--choclo)}
+.hr-pie{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 10px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;font-size:.74rem;font-weight:600;line-height:1.3}
+.hr-pie a{display:block;color:var(--choclo);font-weight:700;margin-top:2px}
+.hero-promo{width:300px}
+@media(min-width:881px){
+  .hero{min-height:0;padding:34px 0 52px}
+  .hero-inner{gap:var(--sp-6)}
+  .hero-chip{margin-bottom:var(--sp-4)}
+  .hero h1{font-size:clamp(2.1rem,3.3vw,2.9rem);max-width:18ch;margin-bottom:var(--sp-4)}
+  .hero p.claim{font-size:1.05rem;margin-bottom:var(--sp-5)}
+  .hero-micro{margin-top:var(--sp-4)}
+}
+@media(max-width:1080px) and (min-width:881px){.hero-reel{width:168px}.hero-promo{width:270px}}
+@media(max-width:880px){
+  /* Primera pantalla del móvil: oferta + reel lado a lado, y el titular justo debajo */
+  .hero{min-height:0;padding:18px 0 var(--sp-7)}
+  .hero-inner{gap:20px}
+  .hero-side{order:-1;width:100%;align-items:stretch;gap:10px}
+  .hero-side .hero-promo{order:0;flex:1;min-width:0;width:auto;max-width:none;border-width:2px}
+  .hero-reel{width:36%;max-width:150px;border-width:2px;aspect-ratio:auto;min-height:232px}
+  .hp-head{flex-direction:column;gap:0;padding:7px 10px;font-size:.62rem;letter-spacing:.1em}
+  .hp-main{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 10px 4px}
+  .hp-main img{width:100%!important;height:74px!important}
+  .hp-main h3{font-size:1rem}
+  .hp-main p{display:none}
+  .hp-precio{padding:0 10px}
+  .hp-etq{font-size:1rem!important}
+  .hero-promo .hp-ctas{flex-direction:column;gap:6px;padding:8px 10px 10px}
+  .hp-ctas .btn{padding:9px 10px;font-size:.78rem;white-space:normal;line-height:1.2;border-radius:14px}
+  .hr-pie a{display:none}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.5rem);margin-bottom:var(--sp-4)}
+  .hero p.claim{font-size:1rem;margin-bottom:var(--sp-5)}
+  .scroll-ind{display:none}
+  /* Barra de aviso en una sola línea */
+  .promo-bar .wrap{flex-wrap:nowrap;gap:8px;padding-top:7px;padding-bottom:7px}
+  #pbTxt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;text-align:left}
+  .promo-bar a.pb-cta{font-size:0;padding:5px 12px;flex-shrink:0}
+  .promo-bar a.pb-cta::after{content:attr(data-corto);font-size:.8rem}
+  /* Ofertas en fila deslizable (antes eran 4 tarjetas una debajo de otra) */
+  .of-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 16px 14px;margin-left:-16px;margin-right:-16px;-webkit-overflow-scrolling:touch}
+  .of-card{flex:0 0 76%;scroll-snap-align:center}
+  /* Pestañas del catálogo en una fila deslizable */
+  .tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding:4px 16px 10px;margin-left:-16px;margin-right:-16px;-webkit-overflow-scrolling:touch}
+  .tab{flex-shrink:0;white-space:nowrap}
+  /* Raíces más compacto */
+  .flags{font-size:1.35rem;gap:8px;margin-bottom:var(--sp-5)}
+  .pillars{gap:10px} .pillar{padding:14px 16px;text-align:left}
+  .pillar .pico{display:none}
+  /* En el móvil los QR no sirven (ya estás en el móvil): se ocultan para acortar la página */
+  .qr-band{display:none}
+}
 @media(max-width:880px){
   .hero-inner{flex-direction:column;align-items:stretch}
   .hero-promo{order:-1;width:100%;max-width:460px}
@@ -464,7 +526,7 @@ footer ul a:hover{color:var(--choclo)}
 
 <!-- BARRA DE PROMO (arriba del todo). Texto por defecto si no hay campaña; el script la cambia con ofertas.json -->
 <div class="promo-bar base" id="promoBar" role="region" aria-label="Aviso">
-  <div class="wrap"><span id="pbTxt">🛍️ ¿Te apartamos algo? Pídelo por WhatsApp y recógelo en el Mercado de Ruzafa</span><a class="pb-cta" id="pbCta" href="https://wa.me/34671339005?text=%C2%A1Hola!%20Quer%C3%ADa%20apartar%3A%20" target="_blank" rel="noopener">Escríbenos</a></div>
+  <div class="wrap"><span id="pbTxt">🛍️ ¿Te apartamos algo? Pídelo por WhatsApp y recógelo en el Mercado de Ruzafa</span><a class="pb-cta" id="pbCta" data-corto="Escríbenos" href="https://wa.me/34671339005?text=%C2%A1Hola!%20Quer%C3%ADa%20apartar%3A%20" target="_blank" rel="noopener">Escríbenos</a></div>
 </div>
 
 <!-- HEADER -->
@@ -505,11 +567,22 @@ footer ul a:hover{color:var(--choclo)}
         </div>
         <p class="hero-micro">Lun–Sáb 8:30–15:00 (Puestos 213-220, interior) · Lun–Vie 17:00–21:00 (Puestos 107-108, exterior) · Domingos cerrado · <a href="https://wa.me/34671339005" target="_blank" rel="noopener">671 33 90 05</a></p>
       </div>
-      <!-- OFERTA DESTACADA EN EL HERO (se rellena con ofertas.json) -->
-      <aside class="hero-promo" id="heroPromo" aria-label="Oferta destacada"></aside>
+      <div class="hero-side">
+        <!-- OFERTA DESTACADA EN EL HERO (se rellena con ofertas.json) -->
+        <aside class="hero-promo" id="heroPromo" aria-label="Oferta destacada"></aside>
+        <!-- REEL (arriba a la derecha). Sin sonido hasta que el cliente lo activa. -->
+        <figure class="hero-reel" id="heroReel" aria-label="Vídeo: el puesto por dentro">
+          <video id="hrVideo" muted loop playsinline preload="metadata" poster="assets/reels/puesto-por-dentro.jpg">
+            <source src="assets/reels/puesto-por-dentro.mp4" type="video/mp4">
+          </video>
+          <span class="hr-tag"><i aria-hidden="true"></i>REEL</span>
+          <button class="hr-snd" id="hrSnd" type="button" aria-label="Activar el sonido" aria-pressed="false">🔇</button>
+          <figcaption class="hr-pie">El puesto por dentro<a href="https://instagram.com/alnortedelsur_es" target="_blank" rel="noopener">Ver más reels →</a></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
-  <a href="#raices" class="scroll-ind" aria-label="Bajar al contenido">▾</a>
+  <a href="#galeria" class="scroll-ind" aria-label="Bajar al contenido">▾</a>
 </section>
 
 <!-- OFERTA DE LA SEMANA (se muestra sola durante la vigencia de ofertas.json) -->
@@ -536,35 +609,6 @@ footer ul a:hover{color:var(--choclo)}
 
 
 
-<!-- BANDA IDENTIDAD LATINA -->
-<section class="raices" id="raices">
-  <div class="wrap">
-    <span class="eyebrow" style="color:var(--choclo)">Nuestras raíces</span>
-    <h2>Un pedacito de cada país de Latinoamérica</h2>
-    <p>De México al sur del continente: traemos a València los sabores, las marcas y los productos con los que creciste. Auténtico, natural y de origen.</p>
-    <div class="flags" aria-hidden="true">🇲🇽 🇬🇹 🇸🇻 🇭🇳 🇳🇮 🇨🇷 🇵🇦 🇨🇴 🇻🇪 🇪🇨 🇵🇪 🇧🇴 🇨🇱 🇦🇷 🇺🇾 🇵🇾 🇧🇷 🇩🇴 🇨🇺 🇵🇷</div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="pico" aria-hidden="true">🌎</div><h4>Origen auténtico</h4><p>Productos importados directamente de Latinoamérica, con su marca y sabor de siempre.</p></div>
-      <div class="pillar reveal"><div class="pico" aria-hidden="true">🍃</div><h4>Sabor natural</h4><p>Géneros frescos, granos, pulpas y especias puras, sin perder su esencia.</p></div>
-      <div class="pillar reveal"><div class="pico" aria-hidden="true">❤️</div><h4>Tradición latina</h4><p>Atendido por gente que conoce tu cocina y te asesora como en casa.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- BIENVENIDA -->
-<section class="welcome" id="bienvenida">
-  <div class="wrap welcome-grid">
-    <div class="reveal">
-      <span class="eyebrow">Bienvenido</span>
-      <h2>Tu despensa latina en València</h2>
-      <p>Cierra los ojos y déjate llevar: el dorado del <strong>maíz</strong>, el aroma de los <strong>quesos llaneros y costeños</strong>, el color de los <strong>ajíes</strong> y la dulzura de las <strong>pulpas de fruta</strong>. En <strong>AL NORTE DEL SUR</strong> no vendemos solo productos, cuidamos un trocito de tu historia.</p>
-      <p>Llenamos nuestros puestos del Mercado de Ruzafa con marcas de confianza como <strong>Goya, Coexito, América, Diana</strong> y <strong>P.A.N.</strong>, y la garantía de origen y frescura en todo lo que te llevas.</p>
-      <p>Ven, huele, elige y conversa. Te esperamos donde el sabor latino se siente de verdad. 🌎</p>
-      <div style="margin-top:26px"><a href="#catalogo" class="btn btn-primary btn-sm">Descubre nuestro catálogo →</a></div>
-    </div>
-    <div class="welcome-img reveal" style="background-image:url('assets/img/quesos-nevera.jpg')" role="img" aria-label="Nevera de quesos latinos de la tienda"></div>
-  </div>
-</section>
 
 <!-- GALERÍA CARRUSEL -->
 <section class="gallery" id="galeria">
@@ -731,6 +775,36 @@ footer ul a:hover{color:var(--choclo)}
         <div style="margin-top:22px"><a href="https://wa.me/34671339005?text=%C2%A1Hola!%20%C2%BFQu%C3%A9%20frescos%20tienen%20hoy%3F" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ico-svg" aria-hidden="true"><use href="#i-whatsapp"/></svg> Consultar disponibilidad</a></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- BANDA IDENTIDAD LATINA -->
+<section class="raices" id="raices">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--choclo)">Nuestras raíces</span>
+    <h2>Un pedacito de cada país de Latinoamérica</h2>
+    <p>De México al sur del continente: traemos a València los sabores, las marcas y los productos con los que creciste. Auténtico, natural y de origen.</p>
+    <div class="flags" aria-hidden="true">🇲🇽 🇬🇹 🇸🇻 🇭🇳 🇳🇮 🇨🇷 🇵🇦 🇨🇴 🇻🇪 🇪🇨 🇵🇪 🇧🇴 🇨🇱 🇦🇷 🇺🇾 🇵🇾 🇧🇷 🇩🇴 🇨🇺 🇵🇷</div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">🌎</div><h4>Origen auténtico</h4><p>Productos importados directamente de Latinoamérica, con su marca y sabor de siempre.</p></div>
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">🍃</div><h4>Sabor natural</h4><p>Géneros frescos, granos, pulpas y especias puras, sin perder su esencia.</p></div>
+      <div class="pillar reveal"><div class="pico" aria-hidden="true">❤️</div><h4>Tradición latina</h4><p>Atendido por gente que conoce tu cocina y te asesora como en casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIENVENIDA -->
+<section class="welcome" id="bienvenida">
+  <div class="wrap welcome-grid">
+    <div class="reveal">
+      <span class="eyebrow">Bienvenido</span>
+      <h2>Tu despensa latina en València</h2>
+      <p>Cierra los ojos y déjate llevar: el dorado del <strong>maíz</strong>, el aroma de los <strong>quesos llaneros y costeños</strong>, el color de los <strong>ajíes</strong> y la dulzura de las <strong>pulpas de fruta</strong>. En <strong>AL NORTE DEL SUR</strong> no vendemos solo productos, cuidamos un trocito de tu historia.</p>
+      <p>Llenamos nuestros puestos del Mercado de Ruzafa con marcas de confianza como <strong>Goya, Coexito, América, Diana</strong> y <strong>P.A.N.</strong>, y la garantía de origen y frescura en todo lo que te llevas.</p>
+      <p>Ven, huele, elige y conversa. Te esperamos donde el sabor latino se siente de verdad. 🌎</p>
+      <div style="margin-top:26px"><a href="#catalogo" class="btn btn-primary btn-sm">Descubre nuestro catálogo →</a></div>
+    </div>
+    <div class="welcome-img reveal" style="background-image:url('assets/img/quesos-nevera.jpg')" role="img" aria-label="Nevera de quesos latinos de la tienda"></div>
   </div>
 </section>
 
@@ -998,6 +1072,17 @@ footer ul a:hover{color:var(--choclo)}
     document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
   }
 
+  // REEL DEL HERO: arranca solo y sin sonido cuando se ve; se para al salir de pantalla.
+  (function(){
+    const v=document.getElementById('hrVideo'), b=document.getElementById('hrSnd');
+    if(!v||!b) return;
+    v.addEventListener('error',()=>{document.getElementById('heroReel').style.display='none';},true);
+    b.addEventListener('click',()=>{v.muted=!v.muted;b.textContent=v.muted?'🔇':'🔊';b.setAttribute('aria-pressed',String(!v.muted));b.setAttribute('aria-label',v.muted?'Activar el sonido':'Quitar el sonido');if(v.paused)v.play().catch(()=>{});});
+    v.addEventListener('click',()=>{v.paused?v.play().catch(()=>{}):v.pause();});
+    if(reduceMotion||!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?v.play().catch(()=>{}):v.pause();}),{threshold:.4}).observe(v);
+  })();
+
   // OFERTA DE LA SEMANA (loop 6.5): ofertas entre vigencia.desde y vigencia.hasta, hora de Madrid.
   // Además (11/10/2026): barra arriba del todo + tarjeta en el hero. PREAVISO_DIAS antes de la campaña
   // se anuncia como «Próximamente» para que la gente aparte por WhatsApp. Poner 0 para no avisar antes.
@@ -1030,8 +1115,8 @@ footer ul a:hover{color:var(--choclo)}
       bar.className='promo-bar'+(activa?'':' pre');
       document.getElementById('pbTxt').textContent=(activa?'🎁 '+d.campana+': ':'📅 '+d.campana+' ('+rango+'): ')+g.titulo+(g.precio!=null?' a '+eur(g.precio):'')+(activa?(quedan===0?' · ¡último día!':' · hasta el '+corta(d.vigencia.hasta)):'');
       const cta=document.getElementById('pbCta');
-      if(activa){cta.textContent=d.boton||('Ver las '+d.ofertas.length+' ofertas');cta.href='#oferta';cta.removeAttribute('target');}
-      else{cta.textContent='Apártalo ya por WhatsApp';cta.href=apartar(g);}
+      if(activa){cta.textContent=d.boton||('Ver las '+d.ofertas.length+' ofertas');cta.dataset.corto='Ver';cta.href='#oferta';cta.removeAttribute('target');}
+      else{cta.textContent='Apártalo ya por WhatsApp';cta.dataset.corto='Apartar';cta.href=apartar(g);}
 
       // 2) Tarjeta en el hero (se ve sin bajar)
       const hp=document.getElementById('heroPromo');
