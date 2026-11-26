@@ -2,6 +2,69 @@
  "nota": "La web muestra la PRIMERA campaña con activa distinta de false que esté en vigencia (o a 5 días o menos de empezar). Al caducar, pasa sola a la siguiente.",
  "campanas": [
   {
+   "campana": "Black Friday en ALNORTEDELSUR",
+   "antetitulo": "Black Friday · viernes 27 y sábado 28",
+   "subtitulo": "Solo viernes 27 y sábado 28 de noviembre en el Mercado de Ruzafa: combos con descuento para tus hallacas, tus buñuelos y tu mate, y empanadas a 2 por 5 € el sábado. El descuento se aplica al pagar en caja.",
+   "nota_vigencia": "Válido viernes 27 y sábado 28 de noviembre de 2026, mientras haya existencias. Puestos 213-220 (lun-sáb 8:30-15:00) y 107-108 (lun-vie 17:00-21:00). ¿Te lo apartamos? WhatsApp 671 339 005.",
+   "boton": "Ver las ofertas del Black Friday",
+   "vigencia": {
+    "desde": "2026-11-27",
+    "hasta": "2026-11-28"
+   },
+   "ofertas": [
+    {
+     "id": "bf-hallaquero",
+     "tipo": "gancho",
+     "titulo": "Combo hallaquero: todo para 50 hallacas",
+     "texto": "En una sola bolsa, listo para llevar. Ahorra un 10 %. ¡Solo 30 combos! Ají dulce fresco: últimas unidades.",
+     "precio": 49.9,
+     "etiqueta": "Ahorra 10 %",
+     "boton": "Resérvalo por WhatsApp",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/black-friday/combo-hallaquero.jpg"
+     ],
+     "precio_antes": 55.45
+    },
+    {
+     "id": "bf-bunuelos",
+     "tipo": "normal",
+     "titulo": "Combo buñuelos y pandebono",
+     "texto": "Mezcla para buñuelos, mezcla para pandebono y queso costeño, con un 10 % de descuento.",
+     "precio": null,
+     "etiqueta": "-10 %",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/black-friday/combo-bunuelos-pandebono.jpg"
+     ]
+    },
+    {
+     "id": "bf-yerba",
+     "tipo": "normal",
+     "titulo": "Todo para tu mate argentino",
+     "texto": "Yerba Playadito 1 kg y 500 g, CBSé Hierbas Serranas y Naranja 500 g y dulce de leche Havanna, con un 10 % de descuento.",
+     "precio": null,
+     "etiqueta": "-10 %",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/black-friday/yerba-mate.jpg"
+     ]
+    },
+    {
+     "id": "bf-empanadas",
+     "tipo": "normal",
+     "titulo": "Empanadas: 2 por 5 €",
+     "texto": "Carne molida, pollo o queso, con nuestra salsa de ajo y picante. Solo el sábado 28, de 8:30 a 15:00 en los puestos 213-220.",
+     "precio": null,
+     "etiqueta": "Solo sábado 28",
+     "foto_completa": true,
+     "fotos": [
+      "redes/fotos/black-friday/empanadas-2x5.jpg"
+     ]
+    }
+   ]
+  },
+  {
    "campana": "Colada morada y Día de Muertos · horario especial",
    "antetitulo": "Este fin de semana",
    "subtitulo": "Sábado 31 abrimos de 8:30 a 15:00 en los puestos 213-220. Y SOLO este domingo 1 de noviembre abrimos de 10:00 a 14:00 en los puestos 107-108, para que no te falte nada de la colada morada, los tamales y el Día de los Muertos.",
